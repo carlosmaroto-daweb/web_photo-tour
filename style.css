@@ -1,0 +1,120 @@
+/*
+Theme Name: PhotoTour
+Theme URI: https://cmaroto307.ieszaidinvergeles.es/wp/
+Author: Carlos Maroto Delgado
+Author URI: https://cmaroto307.ieszaidinvergeles.es/
+Description: We offer you the best quality Photo Tours and Workshops to the most spectacular destinations on Earth. More than 5 years of experience.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: photo, tour, travel
+Text Domain: generaltheme
+Domain Path: /languages
+*/
+:root {
+    --main-color: #fcb941;
+}
+
+.white-text {
+    color: white !important;
+}
+
+.white-text:hover {
+    color: var(--main-color) !important;
+}
+
+.no-padding-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.black-text {
+    color: black !important;
+}
+
+.black-text:hover {
+    color: var(--main-color) !important;
+}
+
+.menu li a {
+    text-transform: uppercase !important;
+    font-weight: 400;
+}
+
+.dark-background {
+    background-color: #333 !important;
+}
+
+.active a {
+    font-weight: 400 !important;
+    color: var(--main-color) !important;
+}
+
+.entry-title a {
+    color: black !important;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.entry-title a:hover {
+    color: var(--main-color) !important;
+    font-weight: 600 !important;
+}
+
+.post-categories {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.post-categories li{
+    display: inline-block;
+}
+
+.single-thumb {
+    height: 50vh !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.img-resp {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cat-destacado {
+    list-style-type: none;
+}
+
+.cta-title {
+    font-size: 3rem !important;
+}
+
+.newsletter {
+    width: 100% !important;
+    background-color: #333 !important;
+    padding: 100px !important;
+    height: 100% !important;
+    margin-bottom: 50px;
+}
+
+.cta-box {
+    margin-bottom: 0px;
+}
+
+.cta-box p {
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.miniatura {
+    width: 60px !important;
+    height: 60px !important;
+    float: left;
+    margin-right: 20px;
+    
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
