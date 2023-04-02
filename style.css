@@ -94,7 +94,7 @@ Domain Path: /languages
 .newsletter {
     width: 100% !important;
     background-color: #333 !important;
-    padding: 100px !important;
+    padding: 50px !important;
     height: 100% !important;
     margin-bottom: 50px;
 }
@@ -144,4 +144,9 @@ Domain Path: /languages
 .title h3 {
     font-size: 1.7rem;
     font-weight: 600;
+}
+
+.page-header h1 {
+    color: white;
+    text-shadow: 1px 1px 2px #333;
 }
