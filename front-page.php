@@ -688,7 +688,7 @@
     	</div>
     </section>
 
-    <!--  -->
+    <!-- Subscribe Form -->
     <section class="subscribe">
     	<div class="container">
     		<div class="heading">
@@ -800,46 +800,46 @@
     	</div>
     </section>
 
-    <!--  -->
+    <!-- Instagram Links -->
     <section class="instagram mb-3">
     	<div class="container">
     		<div class="heading">
-    			<p class="heading-cat">Follow Us On Instagram <span class="highlight">@molla_store<span></p>
+    			<p class="heading-cat">Follow Us On Instagram <span class="highlight">@photo_tour<span></p>
     		</div>
         	<div class="row">
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/instagram/back-1.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img1.jpg">
         			<div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+                        <a href="#"><i class="icon-heart-o"></i>2241</a>
+                        <a href="#"><i class="icon-comments"></i>47</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/instagram/back-2.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img2.jpg">
         			<div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+                        <a href="#"><i class="icon-heart-o"></i>189</a>
+                        <a href="#"><i class="icon-comments"></i>34</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/instagram/back-3.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img3.jpg">
         			<div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+                        <a href="#"><i class="icon-heart-o"></i>624</a>
+                        <a href="#"><i class="icon-comments"></i>45</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/instagram/back-4.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img4.jpg">
         			<div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+                        <a href="#"><i class="icon-heart-o"></i>285</a>
+                        <a href="#"><i class="icon-comments"></i>52</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/instagram/back-5.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img5.jpg">
         			<div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+                        <a href="#"><i class="icon-heart-o"></i>351</a>
+                        <a href="#"><i class="icon-comments"></i>52</a>
                     </div>
         		</div>
         	</div>
