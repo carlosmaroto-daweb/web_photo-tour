@@ -6,25 +6,25 @@
     <div class="slider">
     	<div class="intro">
     		<div class="title">
-    			<h3>Premium Outdoor Gear & Clothing</h3>
+    			<h3>Where your photos come true</h3>
     		</div>
     		<div class="content">
-    			<h4><i>Front-Page Our New Collections 2019</i></h4>
-    			<h5>Ski & Snowboard</h5>
+    			<h4><i>The best tours for photograpy lovers</i></h4>
+    			<h5>Photos + Tours</h5>
     		</div>
     		<div class="action">
-    			<a href="category.html">discover now</a>
+    			<a href="#">discover now</a>
     		</div>
     	</div>
-    	<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/slider/back-2.png">
     </div>
 </div>
 <main class="main">
 	<section class="logos">
+
+		<!-- Container Parners -->
 		<div class="container">
-			<hr class="mb-4">
 			<div class="heading">
-				<p class="heading-cat">trending brands</p>
+				<p class="heading-cat">Parners</p>
 			</div>
 			<div class="owl-carousel mb-5 owl-simple" data-toggle="owl" 
             data-owl-options='{
@@ -51,31 +51,31 @@
                 }
             }'>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/1.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner1.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/2.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner2.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/3.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner3.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/4.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner4.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/5.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner5.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/6.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner6.png" alt="Brand Name">
                 </a>
 
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/brands/1.png" alt="Brand Name">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner7.png" alt="Brand Name">
                 </a>
             </div><!-- End .owl-carousel -->
 		</div>

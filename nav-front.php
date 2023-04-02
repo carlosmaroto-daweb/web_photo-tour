@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-	<div class="background" style="background-image: url(<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/slider/back-1.jpg);">
+	<div class="background" style="background-image: url(<?php echo bloginfo('template_directory');?>/assets/images/phototour/index-bg.jpg);">
 		<header class="header">
             <div class="header-top">
                 <div class="header-left">
@@ -59,7 +59,7 @@
                                 <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a>
                             </li>
                             <li>
-                                <a href="category.html" class="sf-with-ul">Shop</a>
+                                <a href="#" class="sf-with-ul">Shop</a>
 
                                 <div class="megamenu megamenu-md">
                                     <div class="row no-gutters">
@@ -117,7 +117,7 @@
                                 </div><!-- End .megamenu megamenu-md -->
                             </li>
                             <li>
-                                <a href="product.html" class="sf-with-ul">Product</a>
+                                <a href="#" class="sf-with-ul">Product</a>
 
                                 <div class="megamenu megamenu-sm">
                                     <div class="row no-gutters">

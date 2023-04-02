@@ -18,6 +18,7 @@
     <link rel="manifest" href="<?php echo bloginfo('template_directory');?>/assets/images/icons/site.html">
     <link rel="mask-icon" href="<?php echo bloginfo('template_directory');?>/assets/images/icons/safari-pinned-tab.svg" color="#666666">
     <link rel="shortcut icon" href="<?php echo bloginfo('template_directory');?>/assets/images/phototour/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <meta name="apple-mobile-web-app-title" content="PhotoTour">
     <meta name="application-name" content="PhotoTour">
     <meta name="msapplication-TileColor" content="#cc9966">

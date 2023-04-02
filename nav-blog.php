@@ -171,7 +171,7 @@
                                 <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>" class="black-text">Home</a>
                             </li>
                             <li>
-                                <a href="category.html" class="sf-with-ul black-text">Shop</a>
+                                <a href="#" class="sf-with-ul black-text">Shop</a>
 
                                 <div class="megamenu megamenu-md">
                                     <div class="row no-gutters">
@@ -229,7 +229,7 @@
                                 </div><!-- End .megamenu megamenu-md -->
                             </li>
                             <li>
-                                <a href="product.html" class="sf-with-ul black-text">Product</a>
+                                <a href="#" class="sf-with-ul black-text">Product</a>
 
                                 <div class="megamenu megamenu-sm">
                                     <div class="row no-gutters">

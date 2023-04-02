@@ -118,3 +118,30 @@ Domain Path: /languages
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.footer .widget {
+    margin-bottom: 3rem;
+}
+
+#scroll-top {
+    color: #7777;
+    border-radius: 50%;
+}
+
+#scroll-top:hover {
+    color: var(--main-color) !important;
+}
+
+.logos {
+    padding-top: 0px;
+}
+
+.background {
+    height: 100vh !important;
+    background-position: center center;
+}
+
+.title h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
