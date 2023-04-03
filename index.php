@@ -4,19 +4,23 @@
 ?>
 
 <main class="main">
+
+    <!--  -->
     <div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/blog-bg.jpg')">
         <div class="container">
             <h1 class="page-title">Surf my Blog<span>Latest Posts</span></h1>
-        </div><!-- End .container -->
-    </div><!-- End .page-header -->
+        </div>
+    </div>
+
+    <!--  -->
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a></li>
                 <li class="breadcrumb-item active"><a href="#">Blog</a></li>
             </ol>
-        </div><!-- End .container -->
-    </nav><!-- End .breadcrumb-nav -->
+        </div>
+    </nav>
 
     <!-------------------------------------------- inicio post destacado ---------------->
     <!-- Aquí comienza el bucle-->
@@ -40,31 +44,31 @@
                     $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                 }
     ?>
+                <!--  -->
                 <div class="newsletter">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 banner-overlay-div img-resp"  style="background-image: url('<?php echo $PostImg;?>')">
                                 <div class="banner-content banner-content-center">
-                                    <h4 class="banner-subtitle text-white"><?php echo my_tags_comma($post_destacado_ID);?></h4><!-- End .banner-subtitle -->
+                                    <h4 class="banner-subtitle text-white"><?php echo my_tags_comma($post_destacado_ID);?></h4>
                                     <h3 class="banner-title text-white">
-                                        <ul class="cat-destacado">
+                                        <ul class="cta-destacado">
                                             <?php the_category();?>
                                         </ul>
-                                    </h3><!-- End .banner-title -->
+                                    </h3>
                                     <a href="<?php the_permalink();?>" class="btn btn-outline-white banner-link underline">Read More</a>
-                                </div><!-- End .banner-content -->
-                            </div><!-- End .col-lg-6 -->
-                
+                                </div>
+                            </div>
                             <div class="col-lg-6 d-flex align-items-stretch subscribe-div no-padding-lr">
                                 <div class="cta cta-box">
                                     <div class="cta-content">
-                                        <h3 class="cta-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3><!-- End .cta-title -->
+                                        <h3 class="cta-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
                                         <p>By <span class="primary-color"><?php the_author_posts_link();?></span><?php the_excerpt();?></p>
-                                    </div><!-- End .cta-content -->
-                                </div><!-- End .cta -->
-                            </div><!-- End .col-lg-6 -->
-                        </div><!-- End .row -->
-                    </div><!-- End .container -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
     
     <!-- Aquí termina el bucle-->
@@ -78,6 +82,7 @@
     ?>
     <!-------------------------------------------- fin post destacado ---------------->
 
+    <!--  -->
     <div class="page-content">
         <div class="container">
             <div class="row">
@@ -104,14 +109,13 @@
                                     $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                                 }
                     ?>
-                    
+                                <!--  -->
                                 <article class="entry">
                                     <figure class="entry-media">
                                         <a href="<?php the_permalink();?>">
                                             <img src="<?php echo $PostImg;?>" alt="image desc">
                                         </a>
-                                    </figure><!-- End .entry-media -->
-
+                                    </figure>
                                     <div class="entry-body">
                                         <div class="entry-meta">
                                             <span class="entry-author">
@@ -121,22 +125,20 @@
                                             <?php the_time('j, M Y');?>
                                             <span class="meta-separator">|</span>
                                             <?php comments_number('No comments', 'One comment', '% comments');?>
-                                        </div><!-- End .entry-meta -->
+                                        </div>
                                         <br/>
                                         <h2 class="entry-title">
                                             <a href="<?php the_permalink();?>"><?php the_title();?></a>
-                                        </h2><!-- End .entry-title -->
-
+                                        </h2>
                                         <div class="entry-cats">
                                             in <?php the_category();?>
-                                        </div><!-- End .entry-cats -->
-
+                                        </div>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
                                             <a href="<?php the_permalink();?>" class="read-more">Continue Reading</a>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-body -->
-                                </article><!-- End .entry -->
+                                        </div>
+                                    </div>
+                                </article>
 
                     <!-- Aquí termina el bucle-->
                     <?php
@@ -148,6 +150,7 @@
                         wp_reset_query();
                     ?>
 
+                    <!--  -->
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -164,17 +167,18 @@
                             </li>
                         </ul>
                     </nav>
-                </div><!-- End .col-lg-9 -->
+                </div>
 
+                <!--  -->
                 <aside class="col-lg-3">
                     <?php
                         get_sidebar();
                     ?>
-                </aside><!-- End .col-lg-3 -->
-            </div><!-- End .row -->
-        </div><!-- End .container -->
-    </div><!-- End .page-content -->
-</main><!-- End .main -->
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
 	
 <?php
 	get_footer();

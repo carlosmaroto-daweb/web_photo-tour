@@ -1,33 +1,38 @@
 <div class="sidebar">
+
+    <!--  -->
     <div class="widget widget-search">
-        <h3 class="widget-title">Search</h3><!-- End .widget-title -->
+        <h3 class="widget-title">Search</h3>
         <form action="<?php echo home_url('/');?>">
             <label for="ws" class="sr-only">Search in blog</label>
             <input type="search" class="form-control" name="s" id="s" placeholder="Search in blog">
             <button type="submit" class="btn"><i class="icon-search"></i><span class="sr-only">Search</span></button>
         </form>
-    </div><!-- End .widget -->
+    </div>
     
+    <!--  -->
     <div class="widget">
-        <h3 class="widget-title">Browse Tags</h3><!-- End .widget-title -->
+        <h3 class="widget-title">Browse Tags</h3>
         <div class="tagcloud">
             <!-- habilitamos una zona de widgets para la nube de tags  -->
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('TagCloud Widget')) : ?>
                 <div class="warning">Sorry, no widgets instaled for this theme. Go to the admin area and drag your widgets into the sidebar.</div>
             <?php endif;?>
-        </div><!-- End .tagcloud -->
-    </div><!-- End .widget -->
+        </div>
+    </div>
     
+    <!--  -->
     <div class="widget">
-        <h3 class="widget-title">Calendar</h3><!-- End .widget-title -->
+        <h3 class="widget-title">Calendar</h3>
         <!-- habilitamos una zona de widgets para la nube de tags  -->
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Calendar Widget')) : ?>
             <div class="warning">Sorry, no widgets instaled for this theme. Go to the admin area and drag your widgets into the sidebar.</div>
         <?php endif;?>
-    </div><!-- End .widget -->
+    </div>
 
+    <!--  -->
     <div class="widget widget-cats">
-        <h3 class="widget-title">Categories</h3><!-- End .widget-title -->
+        <h3 class="widget-title">Categories</h3>
         <ul>
             <?php 
                 $my_categories = wp_list_categories('title_li=&show_count=1&echo=0');
@@ -35,10 +40,11 @@
                 echo $my_categories;
             ?>
         </ul>
-    </div><!-- End .widget -->
+    </div>
 
+    <!--  -->
     <div class="widget">
-        <h3 class="widget-title">Last Posts</h3><!-- End .widget-title -->
+        <h3 class="widget-title">Last Posts</h3>
         <ul class="posts-list">
             
             <!-- Aquí comienza el bucle-->
@@ -52,7 +58,6 @@
                 if($latest_posts->have_posts()):
                     while($latest_posts->have_posts()):
                         $latest_posts->the_post();
-                        
                         /* Si tengo una imagen representativa la visualizo y si no muestro una imagen por defecto */
                         if(has_post_thumbnail()) { // Esta función devuelve true si hay una imagen representativa
                             // Recupero la imagen representativa
@@ -79,14 +84,14 @@
                 wp_reset_query();
             ?>
             
-        </ul><!-- End .posts-list -->
-    </div><!-- End .widget -->
+        </ul>
+    </div>
 
+    <!--  -->
     <div class="widget widget-text">
-        <h3 class="widget-title">About Blog</h3><!-- End .widget-title -->
-
+        <h3 class="widget-title">About Blog</h3>
         <div class="widget-text-content">
             <p>Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
-        </div><!-- End .widget-text-content -->
-    </div><!-- End .widget -->
-</div><!-- End .sidebar -->
+        </div>
+    </div>
+</div>

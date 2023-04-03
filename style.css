@@ -23,11 +23,6 @@ Domain Path: /languages
     color: var(--main-color) !important;
 }
 
-.no-padding-lr {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
 .black-text {
     color: black !important;
 }
@@ -36,13 +31,19 @@ Domain Path: /languages
     color: var(--main-color) !important;
 }
 
-.menu li a {
-    text-transform: uppercase !important;
-    font-weight: 400;
-}
-
 .dark-background {
     background-color: #333 !important;
+}
+
+.no-padding-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.img-resp {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .active a {
@@ -61,6 +62,11 @@ Domain Path: /languages
     font-weight: 600 !important;
 }
 
+.page-header h1 {
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+}
+
 .post-categories {
     list-style-type: none;
     display: inline-block;
@@ -70,26 +76,19 @@ Domain Path: /languages
     display: inline-block;
 }
 
-.single-thumb {
-    height: 50vh !important;
-    background-size: cover;
+/******************************************  NAV ******************************************/
+
+.background {
+    height: 100vh !important;
     background-position: center center;
-    background-repeat: no-repeat;
 }
 
-.img-resp {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+.menu li a {
+    text-transform: uppercase !important;
+    font-weight: 400;
 }
 
-.cat-destacado {
-    list-style-type: none;
-}
-
-.cta-title {
-    font-size: 3rem !important;
-}
+/*****************************************  INDEX ******************************************/
 
 .newsletter {
     width: 100% !important;
@@ -97,6 +96,10 @@ Domain Path: /languages
     padding: 50px !important;
     height: 100% !important;
     margin-bottom: 50px;
+}
+
+.cta-destacado {
+    list-style-type: none;
 }
 
 .cta-box {
@@ -107,6 +110,32 @@ Domain Path: /languages
     margin-bottom: 0px;
     padding: 5px;
 }
+
+.cta-title {
+    font-size: 3rem !important;
+}
+
+/***************************************  FRONT-PAGE ***************************************/
+
+.title h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.logos {
+    padding-top: 0px;
+}
+
+/*****************************************  SINGLE *****************************************/
+
+.single-thumb {
+    height: 50vh !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/****************************************  SIDEBAR *****************************************/
 
 .miniatura {
     width: 60px !important;
@@ -119,6 +148,8 @@ Domain Path: /languages
     background-repeat: no-repeat;
 }
 
+/****************************************  FOOTER *****************************************/
+
 .footer .widget {
     margin-bottom: 3rem;
 }
@@ -130,23 +161,4 @@ Domain Path: /languages
 
 #scroll-top:hover {
     color: var(--main-color) !important;
-}
-
-.logos {
-    padding-top: 0px;
-}
-
-.background {
-    height: 100vh !important;
-    background-position: center center;
-}
-
-.title h3 {
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.page-header h1 {
-    color: white;
-    text-shadow: 1px 1px 2px #333;
 }

@@ -127,6 +127,10 @@
     
     /* ································································································ SIDEBAR ·············*/
     
+    /*
+     *  Register Widget Zones
+     *
+     */
     function register_widget_zones() {
         register_sidebar(
             array(

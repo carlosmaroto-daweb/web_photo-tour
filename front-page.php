@@ -18,7 +18,7 @@
     		</div>
     	</div>
     </div>
-</div>
+</div><!-- End background nav-front -->
 <main class="main">
 
     <!-- Parners Container -->
