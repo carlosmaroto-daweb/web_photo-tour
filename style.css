@@ -62,11 +62,6 @@ Domain Path: /languages
     font-weight: 600 !important;
 }
 
-.page-header h1 {
-    color: white;
-    text-shadow: 1px 1px 2px #333;
-}
-
 .post-categories {
     list-style-type: none;
     display: inline-block;
@@ -89,6 +84,11 @@ Domain Path: /languages
 }
 
 /*****************************************  INDEX ******************************************/
+
+.page-header h1 {
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+}
 
 .newsletter {
     width: 100% !important;
@@ -146,6 +146,10 @@ Domain Path: /languages
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.wp-calendar-nav{
+    display: none;
 }
 
 /****************************************  FOOTER *****************************************/

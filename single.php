@@ -14,7 +14,7 @@
 
 <main class="main">
 
-    <!--  -->
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container">
             <ol class="breadcrumb">
@@ -25,15 +25,14 @@
         </div>
     </nav>
 
-    <!--  -->
+    <!-- Page Content -->
     <div class="page-content">
-        <div class="entry-media single-thumb" style="background-image:url(<?php echo $PostImg;?>)">
-        </div>
+        <div class="entry-media single-thumb" style="background-image:url(<?php echo $PostImg;?>)"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
 
-                    <!--  -->
+                    <!-- Article -->
                     <article class="entry single-entry">
                         <div class="entry-body">
                             <div class="entry-meta">
@@ -71,7 +70,7 @@
                         ?>
                         <div class="entry-author-details">
                             <figure class="author-media">
-                                <img src="<?php echo $avatar;?>" alt="User name">
+                                <img src="<?php echo $avatar;?>" alt="Image User <?php echo get_the_author_meta('nickname')?>">
                             </figure>
                             <div class="author-body">
                                 <div class="author-header row no-gutters flex-column flex-md-row">
@@ -290,7 +289,7 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Sidebar -->
                 <aside class="col-lg-3">
                     <?php
                         get_sidebar();

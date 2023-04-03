@@ -2,7 +2,7 @@
 	<div class="background" style="background-image: url(<?php echo bloginfo('template_directory');?>/assets/images/phototour/index-bg.jpg);">
 		<header class="header">
 
-            <!--  -->
+            <!-- Header Top -->
             <div class="header-top">
                 <div class="header-left">
                     <div class="header-dropdown">
@@ -40,21 +40,21 @@
                 </div>
             </div>
 
-            <!--  -->
+            <!-- Header Middle -->
             <div class="header-middle sticky-header">
 
-                <!--  -->
+                <!-- Logo and Button Mobile Menu -->
                 <div class="header-left">
                     <button class="mobile-menu-toggler">
                         <span class="sr-only">Toggle mobile menu</span>
                         <i class="icon-bars"></i>
                     </button>
                     <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>" class="logo">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="Molla Logo">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="PhotoTour Logo">
                     </a>
                 </div>
 
-                <!--  -->
+                <!-- Menu Link -->
                 <div class="header-center">
                 	<nav class="main-nav">
                         <ul class="menu sf-arrows">
@@ -159,7 +159,7 @@
                     </nav>
                 </div>
 
-                <!--  -->
+                <!-- Search, Wishlist and Cart -->
                 <div class="header-right">
                     <div class="header-search">
                         <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>

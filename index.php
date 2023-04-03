@@ -5,14 +5,14 @@
 
 <main class="main">
 
-    <!--  -->
+    <!-- Page Header -->
     <div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/blog-bg.jpg')">
         <div class="container">
             <h1 class="page-title">Surf my Blog<span>Latest Posts</span></h1>
         </div>
     </div>
 
-    <!--  -->
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
         <div class="container">
             <ol class="breadcrumb">
@@ -44,7 +44,7 @@
                     $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                 }
     ?>
-                <!--  -->
+                <!-- Newsletter -->
                 <div class="newsletter">
                     <div class="container">
                         <div class="row">
@@ -82,7 +82,7 @@
     ?>
     <!-------------------------------------------- fin post destacado ---------------->
 
-    <!--  -->
+    <!-- Last entries -->
     <div class="page-content">
         <div class="container">
             <div class="row">
@@ -109,11 +109,11 @@
                                     $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                                 }
                     ?>
-                                <!--  -->
+                                <!-- Article -->
                                 <article class="entry">
                                     <figure class="entry-media">
                                         <a href="<?php the_permalink();?>">
-                                            <img src="<?php echo $PostImg;?>" alt="image desc">
+                                            <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
                                         </a>
                                     </figure>
                                     <div class="entry-body">
@@ -150,7 +150,7 @@
                         wp_reset_query();
                     ?>
 
-                    <!--  -->
+                    <!-- Page Navigation -->
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -169,7 +169,7 @@
                     </nav>
                 </div>
 
-                <!--  -->
+                <!-- Sidebar -->
                 <aside class="col-lg-3">
                     <?php
                         get_sidebar();

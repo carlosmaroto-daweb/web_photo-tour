@@ -1,6 +1,6 @@
 <div class="sidebar">
 
-    <!--  -->
+    <!-- Search Form -->
     <div class="widget widget-search">
         <h3 class="widget-title">Search</h3>
         <form action="<?php echo home_url('/');?>">
@@ -10,7 +10,7 @@
         </form>
     </div>
     
-    <!--  -->
+    <!-- Browse Tags Widget -->
     <div class="widget">
         <h3 class="widget-title">Browse Tags</h3>
         <div class="tagcloud">
@@ -21,7 +21,7 @@
         </div>
     </div>
     
-    <!--  -->
+    <!-- Calendar Widget -->
     <div class="widget">
         <h3 class="widget-title">Calendar</h3>
         <!-- habilitamos una zona de widgets para la nube de tags  -->
@@ -30,7 +30,7 @@
         <?php endif;?>
     </div>
 
-    <!--  -->
+    <!-- List Categories -->
     <div class="widget widget-cats">
         <h3 class="widget-title">Categories</h3>
         <ul>
@@ -42,7 +42,7 @@
         </ul>
     </div>
 
-    <!--  -->
+    <!-- Last Posts -->
     <div class="widget">
         <h3 class="widget-title">Last Posts</h3>
         <ul class="posts-list">
@@ -50,8 +50,8 @@
             <!-- Aquí comienza el bucle-->
             <?php
                 $args = array(
-                    'posts_per_page' => 5,                         // Queremos 5 post por página
-                    'post_type'      => array('post'),             // Solo queremos el estandar
+                    'posts_per_page' => 5,              // Queremos 5 post por página
+                    'post_type'      => array('post'),  // Solo queremos el estandar
                 );
                 $latest_posts = new WP_Query($args);
                 
@@ -87,11 +87,11 @@
         </ul>
     </div>
 
-    <!--  -->
+    <!-- About Blog -->
     <div class="widget widget-text">
         <h3 class="widget-title">About Blog</h3>
         <div class="widget-text-content">
-            <p>Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
+            <p>Read our publications to discover the greatest tourist attractions for photography.</p>
         </div>
     </div>
 </div>

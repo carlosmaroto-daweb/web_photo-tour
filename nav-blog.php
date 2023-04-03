@@ -1,7 +1,7 @@
 <div class="page-wrapper">
     <header class="header header-intro-clearance header-3 no-padding-lr dark-background">
 
-        <!--  -->
+        <!-- Header Top -->
         <div class="header-top">
             <div class="container">
                 <div class="header-left text-white">
@@ -43,22 +43,22 @@
             </div>
         </div>
 
-        <!--  -->
+        <!-- Header Middle -->
         <div class="header-middle">
             <div class="container">
 
-                <!--  -->
+                <!-- Logo and Button Mobile Menu -->
                 <div class="header-left">
                     <button class="mobile-menu-toggler">
                         <span class="sr-only">Toggle mobile menu</span>
                         <i class="icon-bars"></i>
                     </button>
                     <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>" class="logo">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="Molla Logo">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="PhotoTour Logo">
                     </a>
                 </div>
 
-                <!--  -->
+                <!-- Search Form -->
                 <div class="header-center">
                     <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
                         <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Wishlist and Cart -->
                 <div class="header-right">
                     <div class="wishlist">
                         <a href="#" title="Wishlist">
@@ -142,11 +142,11 @@
             </div>
         </div>
 
-        <!--  -->
+        <!-- Sticky Header -->
         <div class="header-bottom sticky-header">
             <div class="container">
 
-                <!--  -->
+                <!-- Browse Categories -->
                 <div class="header-left">
                     <div class="dropdown category-dropdown">
                         <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
@@ -162,7 +162,7 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Menu Link -->
                 <div class="header-right">
                     <nav class="main-nav">
                         <ul class="menu sf-arrows">

@@ -8,14 +8,7 @@
 
 <main class="main">
 
-    <!--  -->
-    <div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/blog-bg.jpg')">
-        <div class="container">
-            <h1 class="page-title">Surf my Blog<span>Latest Posts</span></h1>
-        </div>
-    </div>
-
-    <!--  -->
+    <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container">
             <ol class="breadcrumb">
