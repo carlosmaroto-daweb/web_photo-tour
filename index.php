@@ -30,6 +30,7 @@
             'post_type'      => array('post'),
         );
         $post_destacado = new WP_Query($args);
+        $post_destacado_ID = 0;
         
         if($post_destacado->have_posts()):
             while($post_destacado->have_posts()):

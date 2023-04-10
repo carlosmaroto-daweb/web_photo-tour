@@ -808,35 +808,35 @@
     		</div>
         	<div class="row">
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img1.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/insta1.jpg">
         			<div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>2241</a>
                         <a href="#"><i class="icon-comments"></i>47</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img2.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/insta2.jpg">
         			<div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>189</a>
                         <a href="#"><i class="icon-comments"></i>34</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img3.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/insta3.jpg">
         			<div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>624</a>
                         <a href="#"><i class="icon-comments"></i>45</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img4.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/insta4.jpg">
         			<div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>285</a>
                         <a href="#"><i class="icon-comments"></i>52</a>
                     </div>
         		</div>
         		<div class="col-xl-5col col-md-3 col-6 instagram-feed">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/img5.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/insta5.jpg">
         			<div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>351</a>
                         <a href="#"><i class="icon-comments"></i>52</a>
