@@ -708,7 +708,7 @@
     	</div>
     </section>
 
-    <!--  -->
+    <!-- New Blog Posts -->
     <section class="blog mb-6">
     	<div class="container">
     		<div class="heading">
@@ -737,65 +737,53 @@
                     }
                 }'>
 
-                <!--  -->
-                <article class="entry">
-                    <figure class="entry-media">
-                        <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/blog/blog-1.jpg" alt="image desc">
-                        </a>
-                    </figure>
-                    <div class="entry-body text-center">
-                        <div class="entry-meta">
-                            <a href="#">Nov 22, 2018</a>, 0 Comments
-                        </div>
-                        <h3 class="entry-title">
-                            <a href="#">Sed adipiscing ornare.</a>
-                        </h3>
-                        <div class="entry-content">
-                            <a href="#" class="read-more">read more</a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!--  -->
-                <article class="entry">
-                    <figure class="entry-media">
-                        <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/blog/blog-2.jpg" alt="image desc">
-                        </a>
-                    </figure>
-                    <div class="entry-body text-center">
-                        <div class="entry-meta">
-                            <a href="#">Nov 22, 2018</a>, 0 Comments
-                        </div>
-                        <h3 class="entry-title">
-                            <a href="#">Aenean dignissim pellentesque.</a>
-                        </h3>
-                        <div class="entry-content">
-                            <a href="#" class="read-more">read more</a>
-                        </div>
-                    </div>
-                </article>
-                
-                <!--  -->
-                <article class="entry">
-                    <figure class="entry-media">
-                        <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/blog/blog-3.jpg" alt="image desc">
-                        </a>
-                    </figure>
-                    <div class="entry-body text-center">
-                        <div class="entry-meta">
-                            <a href="#">Nov 22, 2018</a>, 0 Comments
-                        </div>
-                        <h3 class="entry-title">
-                            <a href="#">Quisque volutpat mattis.</a>
-                        </h3>
-                        <div class="entry-content">
-                            <a href="#" class="read-more">read more</a>
-                        </div>
-                    </div>
-                </article>
+                <!-- Aquí comienza el bucle-->
+                <?php
+                    $args = array(
+                        'posts_per_page' => 3,
+                    );
+                    $latest_posts = new WP_Query($args);
+                        
+                    if($latest_posts->have_posts()):
+                        while($latest_posts->have_posts()):
+                            $latest_posts->the_post();
+                            /* Si tengo una imagen representativa la visualizo y si no muestro una imagen por defecto */
+                            if(has_post_thumbnail()) { // Esta función devuelve true si hay una imagen representativa
+                                // Recupero la imagen representativa
+                                $PostImg = get_the_post_thumbnail_url();
+                            } else {
+                                $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
+                            }
+                ?>
+                            <!-- Article -->
+                            <article class="entry">
+                                <figure class="entry-media">
+                                    <a href="<?php the_permalink();?>">
+                                        <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                    </a>
+                                </figure>
+                                <div class="entry-body text-center">
+                                    <div class="entry-meta">
+                                        <a href="#"><?php the_time('j, M Y');?></a>, <?php comments_number('No comments', 'One comment', '% comments');?>
+                                    </div>
+                                    <h3 class="entry-title">
+                                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
+                                    </h3>
+                                    <div class="entry-content">
+                                        <a href="<?php the_permalink();?>" class="read-more">read more</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                <!-- Aquí termina el bucle-->
+                <?php
+                        endwhile;
+                    else:
+                        echo 'No posts published yet...';
+                    endif;
+                    
+                    wp_reset_query();
+                ?>
             </div>
     	</div>
     </section>

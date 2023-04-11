@@ -81,6 +81,35 @@
     /* ································································································ POST ·············*/
     
     /**
+     * Returns the page object given its name
+     * @param $title Title Post
+     * @return Object Page
+     */
+    function get_page_object($title) {
+        $query = new WP_Query(
+            array(
+                'post_type'              => 'page',
+                'title'                  =>  $title,
+                'post_status'            => 'all',
+                'posts_per_page'         => 1,
+                'no_found_rows'          => true,
+                'ignore_sticky_posts'    => true,
+                'update_post_term_cache' => false,
+                'update_post_meta_cache' => false,
+                'orderby'                => 'post_date ID',
+                'order'                  => 'ASC',
+            )
+        );
+ 
+        if ( ! empty( $query->post ) ) {
+            $page = $query->post;
+        } else {
+            $page  = null;
+        }
+        return $page;
+    }
+
+    /**
      * Retrieve the post tags like a serie of links
      * @param $post_id Integer Post Id
      */
@@ -152,3 +181,54 @@
         );
     }
     add_action('widgets_init', 'register_widget_zones');
+    
+    
+    /* ································································································ COMMENTS ·············*/
+    
+    /**
+     * Delete url field from comments form
+     * @param $fields array List of comment form fields -> nos la proveee el hook comment_form_default_fields
+     */
+    function delete_url_from_comment_form($fields) {
+        unset($fields['url']); // Quitamos el campo url del array con los campos del formulario de comentarios
+        return $fields;
+    }
+    add_action('comment_form_default_fields', 'delete_url_from_comment_form');
+    
+    /**
+     * Re-order comments form field
+     * @param $fields array List of comment form fields -> nos la proveee el hook comment_form_fields
+     *                                                                            No podemos usar comment_form_default_fields porque no
+     *                                                                            nos ordenaría al manejar este hook los campos por defecto
+     */
+    function reorder_comment_form_fields($fields) {
+        // Si el usuario no está logeado tenemos campos nombre y email
+        if(!is_user_logged_in()) {
+            $aux = array();
+            array_push($aux, $fields['author']);
+            array_push($aux, $fields['email']);
+            array_push($aux, $fields['comment']);
+            array_push($aux, $fields['cookies']);
+            array_push($aux, $fields['consent']);
+            return $aux;
+        }
+        else {
+            return $fields;
+        }
+    }
+    add_action('comment_form_fields', 'reorder_comment_form_fields');
+    
+    /**
+     * Add comment field for privacy policy consent
+     * @param $fields array List of comment form fields -> nos la proveee el hook comment_form_default_fields
+     */
+    function add_comment_consent($fields) {
+        $fields['consent'] = '
+        <p class="comment-form-public"><input type="checkbox" name="consent" id="consent">
+            <label for="consent"> Check this box to give us permission to publicly post your comment
+                                  (I accept the <a href="'.get_page_link(get_page_object('Política de Privacidad')->ID).'">Privacy Policy</a>)
+            </label>
+        </p>';
+        return $fields;
+    }
+    add_action('comment_form_default_fields', 'add_comment_consent');

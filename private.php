@@ -12,7 +12,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a></li>
                 <li class="breadcrumb-item active"><a href="#">Login</a></li>
             </ol>
         </div>

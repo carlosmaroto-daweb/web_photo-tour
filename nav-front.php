@@ -31,9 +31,9 @@
                             <a href="#">Links</a>
                             <ul>
                                 <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-                                <li><a href="<?php echo get_page_link(get_page_by_title('About')->ID);?>">About Us</a></li>
+                                <li><a href="<?php echo get_page_link(get_page_object('About')->ID);?>">About Us</a></li>
                                 <li><a href="#">Contact Us</a></li>
-                                <li><a href="<?php echo get_page_link(get_page_by_title('Private')->ID);?>"><i class="icon-user"></i>Login</a></li>
+                                <li><a href="<?php echo get_page_link(get_page_object('Private')->ID);?>"><i class="icon-user"></i>Login</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -49,7 +49,7 @@
                         <span class="sr-only">Toggle mobile menu</span>
                         <i class="icon-bars"></i>
                     </button>
-                    <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>" class="logo">
+                    <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>" class="logo">
                         <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="PhotoTour Logo">
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                 	<nav class="main-nav">
                         <ul class="menu sf-arrows">
                             <li class="megamenu-container active">
-                                <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a>
+                                <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a>
                             </li>
                             <li>
                                 <a href="#" class="sf-with-ul">Shop</a>
@@ -147,13 +147,13 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="<?php echo get_page_link(get_page_by_title('Reviews')->ID);?>" class="white-text">Reviews</a>
+                                <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>" class="white-text">Reviews</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_page_link(get_page_by_title('Blog')->ID);?>" class="white-text">Blog</a>
+                                <a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>" class="white-text">Blog</a>
                             </li>
                             <li>
-                                <a href="<?php echo get_page_link(get_page_by_title('Archives')->ID);?>" class="white-text">Archives</a>
+                                <a href="<?php echo get_page_link(get_page_object('Archives')->ID);?>" class="white-text">Archives</a>
                             </li>
                         </ul>
                     </nav>

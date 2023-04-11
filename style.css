@@ -62,6 +62,12 @@ Domain Path: /languages
     font-weight: 600 !important;
 }
 
+.entry-media img {
+    min-width: 100% !important;
+    min-height: 280px !important;
+    object-fit: cover;
+}
+
 .post-categories {
     list-style-type: none;
     display: inline-block;
@@ -133,6 +139,10 @@ Domain Path: /languages
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+#reply-title, .comment-notes {
+    display: none;
 }
 
 /****************************************  SIDEBAR *****************************************/

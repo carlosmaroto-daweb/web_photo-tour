@@ -16,7 +16,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a></li>
                 <li class="breadcrumb-item active"><a href="#">Blog</a></li>
             </ol>
         </div>
@@ -54,7 +54,7 @@
                                     <h4 class="banner-subtitle text-white"><?php echo my_tags_comma($post_destacado_ID);?></h4>
                                     <h3 class="banner-title text-white">
                                         <ul class="cta-destacado">
-                                            <?php the_category();?>
+                                            <?php the_category(' & ');?>
                                         </ul>
                                     </h3>
                                     <a href="<?php the_permalink();?>" class="btn btn-outline-white banner-link underline">Read More</a>
@@ -132,7 +132,7 @@
                                             <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                         </h2>
                                         <div class="entry-cats">
-                                            in <?php the_category();?>
+                                            in <?php the_category(' & ');?>
                                         </div>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>

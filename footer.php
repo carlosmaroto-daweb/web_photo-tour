@@ -83,7 +83,7 @@
 							<div class="widget">
 								<h4 class="widget-title">My Account</h4>
 								<ul class="widget-list">
-									<li><a href="<?php echo get_page_link( get_page_by_title('Private')->ID );?>">Sign In</a></li>
+									<li><a href="<?php echo get_page_link(get_page_object('Private')->ID);?>">Sign In</a></li>
 									<li><a href="#">View Cart</a></li>
 									<li><a href="#">My Wishlist</a></li>
 									<li><a href="#">Track My Order</a></li>
@@ -115,12 +115,12 @@
 							<div class="widget">
 								<h4 class="widget-title">Explore</h4>
 								<ul class="widget-list">
-									<li><a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a></li>
+									<li><a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a></li>
 									<li><a href="#">Shop</a></li>
 									<li><a href="#">Product</a></li>
-									<li><a href="<?php echo get_page_link( get_page_by_title('Reviews')->ID );?>">Reviews</a></li>
-									<li><a href="<?php echo get_page_link( get_page_by_title('Blog')->ID );?>">Blog</a></li>
-									<li><a href="<?php echo get_page_link( get_page_by_title('Archives')->ID );?>">Archives</a></li>
+									<li><a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a></li>
+									<li><a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>">Blog</a></li>
+									<li><a href="<?php echo get_page_link(get_page_object('Archives')->ID);?>">Archives</a></li>
 								</ul>
 							</div>
 						</div>
@@ -162,7 +162,7 @@
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
                     <li>
-                        <a href="<?php echo get_page_link(get_page_by_title('Home')->ID);?>">Home</a>
+                        <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a>
                     </li>
                     <li>
                         <a href="#">Shop</a>
@@ -195,13 +195,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link(get_page_by_title('Reviews')->ID);?>">Reviews</a>
+                        <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link(get_page_by_title('Blog')->ID);?>">Blog</a>
+                        <a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>">Blog</a>
                     </li>
                     <li>
-                        <a href="<?php echo get_page_link(get_page_by_title('Archives')->ID);?>">Archives</a>
+                        <a href="<?php echo get_page_link(get_page_object('Archives')->ID);?>">Archives</a>
                     </li>
                 </ul>
             </nav>

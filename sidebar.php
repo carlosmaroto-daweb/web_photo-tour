@@ -87,11 +87,38 @@
         </ul>
     </div>
 
-    <!-- About Blog -->
-    <div class="widget widget-text">
-        <h3 class="widget-title">About Blog</h3>
-        <div class="widget-text-content">
-            <p>Read our publications to discover the greatest tourist attractions for photography.</p>
-        </div>
+    <!-- List Authors -->
+    <div class="widget widget-cats">
+        <h3 class="widget-title">Authors</h3>
+        <ul>
+            <?php
+                $args = array(
+                    'echo'        => false,         // No visualiza el listado de los autores, sino que nos lo devuelve para ser almacenado en una variable
+                    'hide_empty'  => false,         // Visualiza también los autores sin posts publicados
+                    'optioncount' => true,          // Visualiza el número de posts publicados por el autor
+                    'orderby'     => 'post_count',  // Ordena según el número de post publicados
+                    'order'       => 'DESC',        // Ordena de mayor a menor
+                );
+                $my_authors = wp_list_authors($args);
+                $my_authors =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_authors);
+                echo $my_authors;
+            ?>
+        </ul>
+    </div>
+
+    <!-- List Pages -->
+    <div class="widget widget-cats">
+        <h3 class="widget-title">Pages</h3>
+        <ul>
+            <?php
+                // Obtengo el ID de la página que quiero excluir (para ello uso la función de usuario get_page_object() que devuelve el objeto de la pagina)
+                $id = get_page_object('Política de Privacidad')->ID;
+                $args = array(
+                    'title_li' => '',  // Impedimos que visualize la etiqueta PAGES
+                    'exclude'  => $id  // Excluimos el post
+                );
+                wp_list_pages($args);
+            ?>
+        </ul>
     </div>
 </div>
