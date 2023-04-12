@@ -53,7 +53,7 @@
                         <span class="sr-only">Toggle mobile menu</span>
                         <i class="icon-bars"></i>
                     </button>
-                    <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>" class="logo">
+                    <a href="<?php echo home_url('/');?>" class="logo">
                         <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" alt="PhotoTour Logo">
                     </a>
                 </div>
@@ -167,7 +167,7 @@
                     <nav class="main-nav">
                         <ul class="menu sf-arrows">
                             <li class="megamenu-container ">
-                                <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>" class="black-text">Home</a>
+                                <a href="<?php echo home_url('/');?>" class="black-text">Home</a>
                             </li>
                             <li>
                                 <a href="#" class="sf-with-ul black-text">Shop</a>

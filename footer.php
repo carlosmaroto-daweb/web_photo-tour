@@ -115,7 +115,7 @@
 							<div class="widget">
 								<h4 class="widget-title">Explore</h4>
 								<ul class="widget-list">
-									<li><a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a></li>
+									<li><a href="<?php echo home_url('/');?>">Home</a></li>
 									<li><a href="#">Shop</a></li>
 									<li><a href="#">Product</a></li>
 									<li><a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a></li>
@@ -162,7 +162,7 @@
             <nav class="mobile-nav">
                 <ul class="mobile-menu">
                     <li>
-                        <a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a>
+                        <a href="<?php echo home_url('/');?>">Home</a>
                     </li>
                     <li>
                         <a href="#">Shop</a>

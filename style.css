@@ -145,6 +145,35 @@ Domain Path: /languages
     display: none;
 }
 
+.list-comments li {
+    border-bottom: 0.1rem solid #ebebeb;
+    padding-bottom: 4rem;
+    margin-bottom: 5rem;
+}
+
+.comment-body {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.vcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.vcard img {
+    border-radius: 50%;
+    border: 4px solid rgba(181, 181, 181, .7);
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    object-position: center center;
+}
+
 /****************************************  SIDEBAR *****************************************/
 
 .miniatura {
@@ -175,4 +204,32 @@ Domain Path: /languages
 
 #scroll-top:hover {
     color: var(--main-color) !important;
+}
+
+/****************************************  SEARCH *****************************************/
+
+.key {
+    font-weight: 600;
+}
+
+.main-color {
+    color: var(--main-color) !important;
+}
+
+.toolbox-info {
+    font-size: 2.5rem !important;
+}
+
+.miniatura-search {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.size60 {
+    display: inline-block;
+    width: 40px !important;
+    height: 40px !important;
+    color: blue;
 }

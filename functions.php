@@ -153,7 +153,6 @@
     }
     add_filter('excerpt_length', 'my_excerpt_length');
     
-    
     /* ································································································ SIDEBAR ·············*/
     
     /*
@@ -181,7 +180,6 @@
         );
     }
     add_action('widgets_init', 'register_widget_zones');
-    
     
     /* ································································································ COMMENTS ·············*/
     
@@ -232,3 +230,55 @@
         return $fields;
     }
     add_action('comment_form_default_fields', 'add_comment_consent');
+    
+    /**
+     * Save privacy policy consent in data base
+     * @param $comment_id -> Nos lo da el action hook comment_post
+     */
+    function save_comment_consent($comment_id) {
+        $consent_value = $_POST['consent'];
+        if($consent_value) {
+            $valor = "Consent checkbox checked. I accept the privacy policy.";
+        } else {
+            if(is_user_logged_in()) {
+            $valor = "Logged user. I accept the privacy policy.";
+            } else {
+            $valor = "Consent checkbox not checked. I do NOT accept the privacy policy.";
+            }
+        }
+        // Vamos a crear un metadato nuevo para el comentario
+        add_comment_meta($comment_id, 'consent', $valor, true);
+    }
+    add_action('comment_post', 'save_comment_consent');
+    
+    /**
+     * Create a new column Consent in the back-end comments area
+     * @param array $columns Comment Area Colums -> Nos lo provee el filter hook manage_edit-comments_columns
+     */
+    function create_consent_column($columns) {
+        // Modificamos el array $columns para incorporar el nuevo campo de consentimiento
+        $columns = array(
+            'cb'       => '<input type="checkbox">',
+            'author'   => 'Author',
+            'comment'  => 'Comment',
+            'consent'  => 'Consent',
+            'response' => 'Response to',
+            'date'     => 'Submitted on',
+        );
+        return $columns;
+    }
+    add_filter('manage_edit-comments_columns', 'create_consent_column');
+    
+    /**
+     * Display conset in the new comments area column
+     * @param string $column      Comment Area column name
+     * @param string $comment_id  Comment ID
+     */
+    function display_column_consent($column, $comment_id) {
+        if($column == 'consent') {
+            echo get_comment_meta($comment_id, 'consent', true);
+        }
+    }
+    // Las funciones asociadas a un hook tienen por defecto un parámetro, por lo que se le debe añadir dos parámetros, la prioridad y el número de argumentos
+    add_action('manage_comments_custom_column', 'display_column_consent', 1, 2);
+    

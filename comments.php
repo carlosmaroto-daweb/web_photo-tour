@@ -31,6 +31,9 @@
 </div>
 
 <!-- Comment -->
+<ul class="list-comments">
+    <?php wp_list_comments();?>
+</ul>
 <ul>
     <li>
         <div class="comment">

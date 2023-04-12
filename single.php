@@ -2,6 +2,7 @@
 	get_header();
 	the_post();
 	$post_id = $post->ID;
+	$cats = wp_get_post_categories($post_id); // Devuelve un array con las categorias del post
 	/* Si tengo una imagen representativa la visualizo y si no muestro una imagen por defecto */
     if(has_post_thumbnail()) { // Esta función devuelve true si hay una imagen representativa
         // Recupero la imagen representativa
@@ -18,7 +19,7 @@
     <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_object('Home')->ID);?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>">Blog</a></li>
                 <li class="breadcrumb-item active"><a href="#"><?php the_title();?></a></li>
             </ol>
@@ -85,9 +86,9 @@
                         </div>
                     </article>
 
-                    <!-- Author Last Entries -->
+                    <!-- Related Posts -->
                     <div class="related-posts">
-                        <h3 class="title"><?php echo get_the_author_meta('display_name');?> Last Entries</h3>
+                        <h3 class="title">Related Posts</h3>
                         <div class="owl-carousel owl-simple" data-toggle="owl" 
                             data-owl-options='{
                                 "nav": false, 
@@ -110,7 +111,9 @@
                             <!-- Aquí comienza el bucle-->
                             <?php
                                 $args = array(
-                                    'posts_per_page' => 5,     // Queremos 5 post por página
+                                    'posts_per_page' => 5,                // Queremos 5 post por página
+                                    'category__in'   => $cats,            // Incluimos los posts que compartan categoria con el post que estamos viendo
+                                    'post__not_in'   => array($post_id),  // Excluimos el post que estamos viendo
                                 );
                                 $latest_posts = new WP_Query($args);
                                 
