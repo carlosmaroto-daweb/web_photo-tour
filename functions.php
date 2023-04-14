@@ -3,6 +3,11 @@
 
     add_theme_support('post-thumbnails');
 
+    function enable_frontend_dashicons() {
+        wp_enqueue_style( 'dashicons' );
+    }
+    add_action( 'wp_enqueue_scripts', 'enable_frontend_dashicons' );
+
     /* ································································································ THEME SCRIPTS ·············*/
 
     /*
@@ -75,6 +80,12 @@
    
         wp_register_script('demo',  get_template_directory_uri().'/assets/js/demos/demo-24.js', null, null, true);
         wp_enqueue_script('demo');
+ 
+        wp_register_script('imagesloaded',  get_template_directory_uri().'/assets/js/imagesloaded.pkgd.min.js', null, null, true);
+        wp_enqueue_script('imagesloaded');
+ 
+        wp_register_script('isotope',  get_template_directory_uri().'/assets/js/isotope.pkgd.min.js', null, null, true);
+        wp_enqueue_script('isotope');
     }
     add_action('wp_enqueue_scripts','add_theme_scripts');
     
@@ -222,9 +233,9 @@
      */
     function add_comment_consent($fields) {
         $fields['consent'] = '
-        <p class="comment-form-public"><input type="checkbox" name="consent" id="consent">
+        <p class="comment-form-public"><input type="checkbox" name="consent" id="consent" required="required">
             <label for="consent"> Check this box to give us permission to publicly post your comment
-                                  (I accept the <a href="'.get_page_link(get_page_object('Política de Privacidad')->ID).'">Privacy Policy</a>)
+                                  (I accept the <a href="'.get_page_link(get_page_object('Privacy Policy')->ID).'">Privacy Policy</a>)
             </label>
         </p>';
         return $fields;

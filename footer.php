@@ -105,7 +105,7 @@
 		                        <h4 class="widget-title">Legal</h4>
 		                        <ul class="widget-list">
 		                            <li><a href="#">Terms</a></li>
-		                            <li><a href="#">Privacy</a></li>
+		                            <li><a href="<?php get_page_link(get_page_object('Privacy Policy')->ID)?>">Privacy</a></li>
 		                        </ul>
 		                    </div>
 		                </div>
@@ -166,33 +166,9 @@
                     </li>
                     <li>
                         <a href="#">Shop</a>
-                        <ul>
-                            <li><a href="#">Shop List</a></li>
-                            <li><a href="#">Shop Grid 2 Columns</a></li>
-                            <li><a href="#">Shop Grid 3 Columns</a></li>
-                            <li><a href="#">Shop Grid 4 Columns</a></li>
-                            <li><a href="#"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                            <li><a href="#">Shop Fullwidth No Sidebar</a></li>
-                            <li><a href="#">Product Category Boxed</a></li>
-                            <li><a href="#"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                            <li><a href="#">Cart</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Lookbook</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="#">Product</a>
-                        <ul>
-                            <li><a href="#">Default</a></li>
-                            <li><a href="#">Centered</a></li>
-                            <li><a href="#"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Sticky Info</a></li>
-                            <li><a href="#">Boxed With Sidebar</a></li>
-                            <li><a href="#">Full Width</a></li>
-                            <li><a href="#">Masonry Sticky Info</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a>

@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <!-- Wishlist and Cart -->
+                <!--  -->
                 <div class="header-right">
                     <div class="wishlist">
                         <a href="#" title="Wishlist">
@@ -170,89 +170,10 @@
                                 <a href="<?php echo home_url('/');?>" class="black-text">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="sf-with-ul black-text">Shop</a>
-                                <div class="megamenu megamenu-md">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-8">
-                                            <div class="menu-col">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="menu-title">Shop with sidebar</div>
-                                                        <ul>
-                                                            <li><a href="#">Shop List</a></li>
-                                                            <li><a href="#">Shop Grid 2 Columns</a></li>
-                                                            <li><a href="#">Shop Grid 3 Columns</a></li>
-                                                            <li><a href="#">Shop Grid 4 Columns</a></li>
-                                                            <li><a href="#"><span>Shop Market<span class="tip tip-new">New</span></span></a></li>
-                                                        </ul>
-                                                        <div class="menu-title">Shop no sidebar</div>
-                                                        <ul>
-                                                            <li><a href="#"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                                            <li><a href="#">Shop Fullwidth No Sidebar</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="menu-title">Product Category</div>
-                                                        <ul>
-                                                            <li><a href="#">Product Category Boxed</a></li>
-                                                            <li><a href="#"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                        </ul>
-                                                        <div class="menu-title">Shop Pages</div>
-                                                        <ul>
-                                                            <li><a href="#">Cart</a></li>
-                                                            <li><a href="#">Checkout</a></li>
-                                                            <li><a href="#">Wishlist</a></li>
-                                                            <li><a href="#">My Account</a></li>
-                                                            <li><a href="#">Lookbook</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="banner banner-overlay">
-                                                <a href="#" class="banner banner-menu">
-                                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/menu/banner-1.jpg" alt="Banner">
-                                                    <div class="banner-content banner-content-top">
-                                                        <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="#" class="black-text">Shop</a>
                             </li>
                             <li>
-                                <a href="#" class="sf-with-ul black-text">Product</a>
-                                <div class="megamenu megamenu-sm">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-6">
-                                            <div class="menu-col">
-                                                <div class="menu-title">Product Details</div>
-                                                <ul>
-                                                    <li><a href="#">Default</a></li>
-                                                    <li><a href="#">Centered</a></li>
-                                                    <li><a href="#"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                                                    <li><a href="#">Gallery</a></li>
-                                                    <li><a href="#">Sticky Info</a></li>
-                                                    <li><a href="#">Boxed With Sidebar</a></li>
-                                                    <li><a href="#">Full Width</a></li>
-                                                    <li><a href="#">Masonry Sticky Info</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="banner banner-overlay">
-                                                <a href="#">
-                                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/menu/banner-2.jpg" alt="Banner">
-                                                    <div class="banner-content banner-content-bottom">
-                                                        <div class="banner-title text-white">New Trends<br><span><strong>spring 2019</strong></span></div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="#" class="black-text">Product</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>" class="black-text">Reviews</a>

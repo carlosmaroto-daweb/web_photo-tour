@@ -112,7 +112,7 @@
         <ul>
             <?php
                 // Obtengo el ID de la página que quiero excluir (para ello uso la función de usuario get_page_object() que devuelve el objeto de la pagina)
-                $id = get_page_object('Política de Privacidad')->ID;
+                $id = get_page_object('Privacy Policy')->ID;
                 $args = array(
                     'title_li' => '',  // Impedimos que visualize la etiqueta PAGES
                     'exclude'  => $id  // Excluimos el post

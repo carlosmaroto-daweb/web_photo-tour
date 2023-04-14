@@ -16,12 +16,12 @@
 <main class="main">
 
     <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>">Blog</a></li>
-                <li class="breadcrumb-item active"><a href="#"><?php the_title();?></a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php the_title();?></li>
             </ol>
         </div>
     </nav>

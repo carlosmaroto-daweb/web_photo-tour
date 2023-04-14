@@ -31,14 +31,14 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Search</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><?php echo $search_words?></li>
+                <li class="breadcrumb-item" aria-current="page">Search</li>
+                <li class="breadcrumb-item active"><?php echo $search_words?></li>
             </ol>
         </div>
     </nav>
 
 	<!-- Search Result -->
-    <div class="page-content">
+    <div class="page-content mt20">
         <div class="container">
         	<div class="row">
         		<div class="col-lg-9">
@@ -107,8 +107,8 @@
                 								    <?php
                 								        } else {
                 								    ?>
-                        									<button class="btn btn-block btn-outline-primary-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class="dashicons dashicons-media-spreadsheet size60"></span>
+                        									<button class="btn btn-block btn-outline-primary-2 button-type-page" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <p class="post-type-page">PAGE</p>
                                                             </button>
                 								    <?php
                 								        }
