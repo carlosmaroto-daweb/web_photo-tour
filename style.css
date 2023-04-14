@@ -93,6 +93,12 @@ Domain Path: /languages
     font-weight: 400;
 }
 
+.header-intro-clearance .header-bottom .container::after {
+    height: 0px;
+    width: 0px;
+    background-color: unset;
+}
+
 /*****************************************  INDEX ******************************************/
 
 .page-header h1 {
@@ -346,15 +352,14 @@ Domain Path: /languages
     object-position: center center;
 }
 
-.button-type-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.button-type-page .post-type-page {
+    color: var(--main-color);
 }
 
-.post-type-page::after {
-    font-family: 'dashicons';
-    content: "\f495";
-    font-size: 2rem;
+.button-type-page:hover .post-type-page {
+    color: #fff;
+}
+
+.dashicons-media-spreadsheet {
     margin-left: 0.7rem;
 }

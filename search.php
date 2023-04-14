@@ -108,7 +108,7 @@
                 								        } else {
                 								    ?>
                         									<button class="btn btn-block btn-outline-primary-2 button-type-page" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <p class="post-type-page">PAGE</p>
+                                                                <p class="post-type-page">PAGE</p><span class="dashicons dashicons-media-spreadsheet"></span>
                                                             </button>
                 								    <?php
                 								        }

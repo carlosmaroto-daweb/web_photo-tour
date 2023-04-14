@@ -21,11 +21,11 @@
 </div><!-- End background nav-front -->
 <main class="main">
 
-    <!-- Parners Container -->
+    <!-- Partners Container -->
 	<section class="logos">
 		<div class="container">
 			<div class="heading">
-				<p class="heading-cat">Parners</p>
+				<p class="heading-cat">Partners</p>
 			</div>
 			<div class="owl-carousel mb-5 owl-simple" data-toggle="owl" 
                 data-owl-options='{
@@ -52,25 +52,25 @@
                     }
                 }'>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner1.png" alt="Japan Airlines">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner1.png" alt="Japan Airlines">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner2.png" alt="Nikon">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner2.png" alt="Nikon">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner3.png" alt="Turkish Airlines">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner3.png" alt="Turkish Airlines">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner4.png" alt="Canon">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner4.png" alt="Canon">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner5.png" alt="United Airlines">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner5.png" alt="United Airlines">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner6.png" alt="Sony">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner6.png" alt="Sony">
                 </a>
                 <a href="#" class="brand">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/parner7.png" alt="Singapore Airlines">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/partner7.png" alt="Singapore Airlines">
                 </a>
             </div>
 		</div>
