@@ -1,8 +1,7 @@
 <?php
     /*
-    *   Template Name: Archives
-    *
-    */
+     * Template Name: Archives
+     */
     get_header();
     get_template_part('nav', 'blog');
 ?>
@@ -92,7 +91,7 @@
         </div>
     </div>
 </main>
-		
+
 <?php
     get_footer();
 ?>

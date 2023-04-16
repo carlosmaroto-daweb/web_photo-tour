@@ -3,8 +3,11 @@
 
     add_theme_support('post-thumbnails');
 
+    /*
+     *  Enable Frontend Dashicons
+     */
     function enable_frontend_dashicons() {
-        wp_enqueue_style( 'dashicons' );
+        wp_enqueue_style('dashicons');
     }
     add_action( 'wp_enqueue_scripts', 'enable_frontend_dashicons' );
 
@@ -12,7 +15,6 @@
 
     /*
      *  Add theme JS, jQuery scripts and style sheets
-     *
      */
     function add_theme_scripts() {
         
@@ -168,7 +170,6 @@
     
     /*
      *  Register Widget Zones
-     *
      */
     function register_widget_zones() {
         register_sidebar(

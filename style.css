@@ -15,6 +15,40 @@ Domain Path: /languages
     --main-color: #fcb941;
 }
 
+.no-padding-lr {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.active {
+    font-weight: 400 !important;
+    color: var(--main-color) !important;
+}
+
+.page-header h1 {
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.entry-title a {
+    color: black !important;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.entry-title a:hover {
+    color: var(--main-color) !important;
+    font-weight: 600 !important;
+}
+
+.entry-media img {
+    min-width: 100% !important;
+    min-height: 280px !important;
+    object-fit: cover;
+}
+
+/******************************************  NAV ******************************************/
+
 .white-text {
     color: white !important;
 }
@@ -35,54 +69,6 @@ Domain Path: /languages
     background-color: #333 !important;
 }
 
-.no-padding-lr {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-.mt20 {
-    margin-top: 20px;
-}
-
-.img-resp {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.active {
-    font-weight: 400 !important;
-    color: var(--main-color) !important;
-}
-
-.entry-title a {
-    color: black !important;
-    text-transform: uppercase;
-    font-size: 2em;
-}
-
-.entry-title a:hover {
-    color: var(--main-color) !important;
-    font-weight: 600 !important;
-}
-
-.entry-media img {
-    min-width: 100% !important;
-    min-height: 280px !important;
-    object-fit: cover;
-}
-
-.post-categories {
-    list-style-type: none;
-    display: inline-block;
-}
-
-.post-categories li{
-    display: inline-block;
-}
-
-/******************************************  NAV ******************************************/
-
 .background {
     height: 100vh !important;
     background-position: center center;
@@ -101,11 +87,6 @@ Domain Path: /languages
 
 /*****************************************  INDEX ******************************************/
 
-.page-header h1 {
-    color: white;
-    text-shadow: 1px 1px 2px #333;
-}
-
 .newsletter {
     width: 100% !important;
     background-color: #333 !important;
@@ -114,12 +95,27 @@ Domain Path: /languages
     margin-bottom: 50px;
 }
 
+.img-resp {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .banner-content {
     text-shadow: 1px 1px 2px #333;
 }
 
 .cta-destacado {
     list-style-type: none;
+}
+
+.post-categories {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.post-categories li{
+    display: inline-block;
 }
 
 .cta-box {
@@ -301,6 +297,10 @@ Domain Path: /languages
 
 /****************************************  SIDEBAR *****************************************/
 
+.wp-calendar-nav {
+    display: none;
+}
+
 .miniatura {
     width: 60px !important;
     height: 60px !important;
@@ -310,10 +310,6 @@ Domain Path: /languages
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-.wp-calendar-nav{
-    display: none;
 }
 
 /****************************************  FOOTER *****************************************/
@@ -335,9 +331,6 @@ Domain Path: /languages
 
 .key {
     font-weight: 600;
-}
-
-.main-color {
     color: var(--main-color) !important;
 }
 

@@ -8,9 +8,9 @@
 	if(have_posts()) {
 	    $total = $wp_the_query->found_posts;
 	    if($total==1) {
-	        $results = '<span class="key main-color">'.$total.'</span> post found';
+	        $results = '<span class="key">'.$total.'</span> post found';
 	    } else {
-	        $results = '<span class="key main-color">'.$total.'</span> posts found';
+	        $results = '<span class="key">'.$total.'</span> posts found';
 	    }
 	} else {
 	    $results = "No posts found...";
@@ -27,7 +27,7 @@
 	</div>
 
 	<!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-0">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-4">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
@@ -38,7 +38,7 @@
     </nav>
 
 	<!-- Search Result -->
-    <div class="page-content mt20">
+    <div class="page-content">
         <div class="container">
         	<div class="row">
         		<div class="col-lg-9">
@@ -159,7 +159,7 @@
         </div>
     </div>
 </main>
-        
+
 <?php 
     get_footer();
 ?>

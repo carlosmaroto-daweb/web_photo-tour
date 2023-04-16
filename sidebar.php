@@ -14,7 +14,7 @@
     <div class="widget">
         <h3 class="widget-title">Browse Tags</h3>
         <div class="tagcloud">
-            <!-- habilitamos una zona de widgets para la nube de tags  -->
+            <!-- Habilitamos una zona de widgets para la nube de tags  -->
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('TagCloud Widget')) : ?>
                 <div class="warning">Sorry, no widgets instaled for this theme. Go to the admin area and drag your widgets into the sidebar.</div>
             <?php endif;?>
@@ -24,7 +24,7 @@
     <!-- Calendar Widget -->
     <div class="widget">
         <h3 class="widget-title">Calendar</h3>
-        <!-- habilitamos una zona de widgets para la nube de tags  -->
+        <!-- Habilitamos una zona de widgets para el calendario  -->
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Calendar Widget')) : ?>
             <div class="warning">Sorry, no widgets instaled for this theme. Go to the admin area and drag your widgets into the sidebar.</div>
         <?php endif;?>
@@ -83,7 +83,6 @@
                 
                 wp_reset_query();
             ?>
-            
         </ul>
     </div>
 

@@ -18,7 +18,7 @@
     		</div>
     	</div>
     </div>
-</div><!-- End background nav-front -->
+</div>
 <main class="main">
 
     <!-- Partners Container -->
@@ -834,7 +834,7 @@
         </div>
     </section>
 </main>
-		
+
 <?php
 	get_footer();
 ?>

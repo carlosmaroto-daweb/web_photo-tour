@@ -58,7 +58,7 @@
                 <div class="header-center">
                 	<nav class="main-nav">
                         <ul class="menu sf-arrows">
-                            <li class="megamenu-container active">
+                            <li class="active">
                                 <a href="<?php echo home_url('/');?>">Home</a>
                             </li>
                             <li>

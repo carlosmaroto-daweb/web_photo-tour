@@ -105,7 +105,7 @@
 		                        <h4 class="widget-title">Legal</h4>
 		                        <ul class="widget-list">
 		                            <li><a href="#">Terms</a></li>
-		                            <li><a href="<?php get_page_link(get_page_object('Privacy Policy')->ID)?>">Privacy</a></li>
+		                            <li><a href="<?php echo get_page_link(get_page_object('Privacy Policy')->ID)?>">Privacy</a></li>
 		                        </ul>
 		                    </div>
 		                </div>
