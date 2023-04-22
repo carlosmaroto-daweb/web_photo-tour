@@ -10,6 +10,7 @@
     } else {
         $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
     }
+    add_num_visits($post_id);
 	get_template_part('nav', 'blog');
 ?>
 
@@ -71,7 +72,7 @@
                         ?>
                         <div class="entry-author-details">
                             <figure class="author-media">
-                                <img src="<?php echo $avatar;?>" alt="Image User <?php echo get_the_author_meta('nickname')?>">
+                                <img src="<?php echo $avatar;?>" alt="Image User <?php echo get_the_author()?>">
                             </figure>
                             <div class="author-body">
                                 <div class="author-header row no-gutters flex-column flex-md-row">

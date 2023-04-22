@@ -20,7 +20,7 @@
 <main class="main">
 
 	<!-- Page Header -->
-	<div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/blog-bg.jpg')">
+	<div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/archive-bg.jpg')">
 		<div class="container">
 			<h1 class="page-title">Search for<span><?php echo $search_words?></span></h1>
 		</div>

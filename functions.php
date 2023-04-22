@@ -83,6 +83,7 @@
         wp_register_script('demo',  get_template_directory_uri().'/assets/js/demos/demo-24.js', null, null, true);
         wp_enqueue_script('demo');
  
+        // Indispensables para el masonry funcione correctamente
         wp_register_script('imagesloaded',  get_template_directory_uri().'/assets/js/imagesloaded.pkgd.min.js', null, null, true);
         wp_enqueue_script('imagesloaded');
  
@@ -165,6 +166,39 @@
         return $newLength;
     }
     add_filter('excerpt_length', 'my_excerpt_length');
+    
+    // CONTADOR DE VISITAS
+    
+    /**
+     * Retrieve the number of visits of a post
+     * @param int post_id
+     * @return string number of visit
+     */
+    function get_num_visits($post_id) {
+        $numvisits = get_post_meta($post_id, 'numvisits', true);
+        if(!$numvisits) {
+            $numvisits = 0;
+        }
+        if($numvisits == 1) {
+            return $numvisits.' visit';
+        } else {
+            return $numvisits.' visits';
+        }
+    }
+    
+    /**
+     * Add 1 to post visit counter
+     * @param int post_id
+     */
+    function add_num_visits($post_id) {
+        $numvisits = get_post_meta($post_id, 'numvisits', true);
+        if ($numvisits == 0){ // El contador aún no existe, hay que crearlo
+            add_post_meta($post_id, 'numvisits', true);
+        } else { // El contador ya existe, tenemos que incrementarlo en 1
+            $numvisits++;
+            update_post_meta($post_id, 'numvisits', $numvisits);
+        }
+    }
     
     /* ································································································ SIDEBAR ·············*/
     
@@ -294,3 +328,21 @@
     // Las funciones asociadas a un hook tienen por defecto un parámetro, por lo que se le debe añadir dos parámetros, la prioridad y el número de argumentos
     add_action('manage_comments_custom_column', 'display_column_consent', 1, 2);
     
+    /* ································································································ ARCHIVES ·············*/
+    
+    /**
+     * 
+     * @param $limit integer 
+     * @return the posts tags list like html <li> tag
+     */
+    function get_list_tag($limit) {
+        $args = array(
+            'number'   => $limit,   // Como máximo se visualiza $limit tags
+            'order_by' => 'count',  // Ordena según el número de post de cada tag
+            'order'    => 'DESC'    // De más posts a menos posts
+        );
+        $tags = get_tags($args); // Devuelve una colección de objetos tipo tags con todos los tags del BLOG
+        foreach($tags as $tag) {
+            echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'<span class="badge pull-right">'.$tag->count.'</span></a></li>';
+        }
+    }

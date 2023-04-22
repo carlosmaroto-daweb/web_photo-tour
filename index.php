@@ -126,6 +126,8 @@
                                             <?php the_time('j, M Y');?>
                                             <span class="meta-separator">|</span>
                                             <?php comments_number('No comments', 'One comment', '% comments');?>
+                                            <span class="meta-separator">|</span>
+                                            <?php echo get_num_visits($post->ID);?>
                                         </div>
                                         <br/>
                                         <h2 class="entry-title">

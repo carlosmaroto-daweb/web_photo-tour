@@ -27,7 +27,7 @@ Domain Path: /languages
 
 .page-header h1 {
     color: white;
-    text-shadow: 1px 1px 2px #333;
+    text-shadow: 2px 2px 2px #333;
 }
 
 .entry-title a {
@@ -45,6 +45,24 @@ Domain Path: /languages
     min-width: 100% !important;
     min-height: 280px !important;
     object-fit: cover;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    transition: none;
+    line-height: 1.5;
+}
+
+a:hover .badge {
+    border-color: var(--main-color);
+}
+
+.pull-right {
+    float: right;
 }
 
 /******************************************  NAV ******************************************/
@@ -102,7 +120,7 @@ Domain Path: /languages
 }
 
 .banner-content {
-    text-shadow: 1px 1px 2px #333;
+    text-shadow: 2px 2px 2px #333;
 }
 
 .cta-destacado {
@@ -240,7 +258,7 @@ Domain Path: /languages
 .vcard img {
     position: absolute;
     border-radius: 50%;
-    border: 3px solid rgba(181, 181, 181, .7);
+    border: 4px solid rgba(181,181,181,.2);
     width: 50px;
     height: 50px;
 }
@@ -355,4 +373,52 @@ Domain Path: /languages
 
 .dashicons-media-spreadsheet {
     margin-left: 0.7rem;
+}
+
+/****************************************  ARCHIVES *****************************************/
+
+.entry {
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.entry-item .entry-title a {
+    font-size: 1.5em;
+}
+
+.entry-title {
+    border-bottom: 1px dotted rgba(99,99,99,.5) !important;
+    padding-bottom: 10px !important;
+}
+
+.list-post {
+    text-align: left;
+}
+
+.list-post li {
+    margin-top: 10px;
+    font-size: 1.5rem !important;
+}
+
+.list-post li::before {
+    content: "\f112";
+    font-family: 'molla';
+}
+
+.list-post li:hover::before {
+    color: var(--main-color);
+}
+
+.list-post-count{
+    width: 70%;
+    text-align: left;
+}
+
+.list-post-count li {
+    margin-top: 10px;
+    font-size: 1.5rem !important;
+}
+
+.main-color {
+    color: var(--main-color);
 }
