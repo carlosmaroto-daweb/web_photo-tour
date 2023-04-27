@@ -394,7 +394,7 @@
         $profile_pic_url = get_user_meta($user->ID, 'user_pic', true);
         if(empty($profile_pic_url)) {
             // No hay foto de perfil
-            $src = get_template_directory_uri().'/assets/images/phototour/user.jpg';
+            $src = get_template_directory_uri().'/assets/images/phototour/cloud.png';
         } else {
             // Si hay foto de perfil
             $src = $profile_pic_url;
@@ -427,20 +427,30 @@
         if($_FILES['user_pic']['error'] == UPLOAD_ERR_OK) {
             $upload_dir = wp_upload_dir();  // Obtenemos el directorio para subidas de archivo de WP - NO ACABA EN /
             $subdir = '/team/';             // Porción de la ruta que apunta a la carpeta donde hay que subir los archivos de la imagen del lugar
-            $upload_path = $upload_dir['baseurl'].$subdir;
-            $file_name = $username.'-'.$_FILES['user_pic']['name'];
-            $origen = $_FILES['user_pic']['tmp_name'];
-            $destino = $upload_path.$file_name;
-            if(move_uploaded_file($origen, $destino)) {
-                // El archivo se ha movido a nuestra carpeta /upload/team correctamente
-                // Guardamos en el meta campo la url del archivo
-                update_user_meta($user_id, 'user_pic', $destino);
-            } else {
-                // En caso contrario por alguna raazón el archivo no se ha podido mover
-                // Guardamos en el meta campo el error o podemos no grabar nada
-                $myerror = '<br/>Error en la subida del archivo: '.$_FILES['user_pic']['name'].'<br/>';
+            $upload_path = $upload_dir['basedir'].$subdir;
+            if(!is_dir($upload_path) && !mkdir($upload_path)) {
+                $myerror = '<br/>Error creating folder: '.$upload_path.'<br/>';
                 update_user_meta($user_id, 'user_pic', $myerror);
             }
+            else {
+                $file_name = $username.'-'.$_FILES['user_pic']['name'];
+                $origen = $_FILES['user_pic']['tmp_name'];
+                $destino = $upload_path.$file_name;
+                $url_image = $upload_dir['baseurl'].$subdir.$file_name;
+                if(move_uploaded_file($origen, $destino)) {
+                    // El archivo se ha movido a nuestra carpeta /upload/team correctamente
+                    // Guardamos en el meta campo la url del archivo
+                    update_user_meta($user_id, 'user_pic', $url_image);
+                } else {
+                    // En caso contrario por alguna razón el archivo no se ha podido mover
+                    // Guardamos en el meta campo el error o podemos no grabar nada
+                    $myerror = '<br/>Error save file: '.$_FILES['user_pic']['name'].'<br/>';
+                    update_user_meta($user_id, 'user_pic', $myerror);
+                }
+            }
+        } else {
+            $myerror = '<br/>Error file upload<br/>';
+            update_user_meta($user_id, 'user_pic', $myerror);
         }
     }
     add_action('personal_options_update', 'save_extra_user_information');

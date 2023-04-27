@@ -43,7 +43,7 @@
                         <img src="
                             <?php
                                 $user_profile_pic = get_user_meta($curauth->ID, 'user_pic', true);
-                                if(empty($user_profile_pic)) {
+                                if(str_contains($user_profile_pic, "<") || empty($user_profile_pic)) {
                                     $user_profile_pic = bloginfo('template_directory').'/assets/images/phototour/user.jpg';
                                 }
                                 echo $user_profile_pic;
