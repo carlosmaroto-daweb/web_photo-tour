@@ -448,7 +448,7 @@
                     update_user_meta($user_id, 'user_pic', $myerror);
                 }
             }
-        } else {
+        } else if($_FILES['user_pic']['error'] != UPLOAD_ERR_NO_FILE){
             $myerror = '<br/>Error file upload<br/>';
             update_user_meta($user_id, 'user_pic', $myerror);
         }
