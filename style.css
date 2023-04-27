@@ -11,6 +11,8 @@ Tags: photo, tour, travel
 Text Domain: generaltheme
 Domain Path: /languages
 */
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
 :root {
     --main-color: #fcb941;
 }
@@ -377,7 +379,7 @@ a:hover .badge {
 
 /****************************************  ARCHIVES *****************************************/
 
-.entry {
+.masonry .entry {
     padding: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -421,4 +423,37 @@ a:hover .badge {
 
 .main-color {
     color: var(--main-color);
+}
+
+/****************************************  AUTHOR *****************************************/
+
+.signature {
+    font-family: 'Square Peg', cursive;
+    margin: 40px 0;
+    font-size: 4rem;
+}
+
+.social-network .icon-box-title {
+    color: #777;;
+}
+
+.member-content .black-text {
+    text-transform: uppercase;
+    font-size: 2em;
+    color: black !important;
+}
+
+.member-content .black-text:hover {
+    color: var(--main-color) !important;
+}
+
+
+/****************************************  PRIVATE *****************************************/
+
+.mh75 {
+    height: 75vh;
+}
+
+.logged h3, .logged h5 {
+    color: white;
 }

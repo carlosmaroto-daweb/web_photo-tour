@@ -89,8 +89,21 @@
  
         wp_register_script('isotope',  get_template_directory_uri().'/assets/js/isotope.pkgd.min.js', null, null, true);
         wp_enqueue_script('isotope');
+ 
+        // Indispensable para que las skill del author funcionen correctamente
+        wp_register_script('countTo',  get_template_directory_uri().'/assets/js/jquery.countTo.js', array('jQuery'), null, true);
+        wp_enqueue_script('countTo');
     }
     add_action('wp_enqueue_scripts','add_theme_scripts');
+    
+    /*
+     *  Add admin area JS
+     */
+    function add_admin_scripts(){
+        wp_register_script('uploadPreview',  get_template_directory_uri().'/assets/js/uploadPreview.js', null, null, true);
+        wp_enqueue_script('uploadPreview');
+    }
+    add_action('admin_enqueue_scripts', 'add_admin_scripts');
     
     /* ································································································ POST ·············*/
     
@@ -346,3 +359,164 @@
             echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'<span class="badge pull-right">'.$tag->count.'</span></a></li>';
         }
     }
+    
+    /* ································································································ AUTHOR ·············*/
+    
+    /**
+     * Get the author role with a given author_id
+     * @param int $author_id author id 
+     */
+    function get_author_role($author_id) {
+        $my_user = get_userdata($author_id);   // Obtenemos todos los datos del perfil del autor
+        $roles = $my_user->roles;              // Devuelve un array con los roles del autor
+        return implode(', ', $roles);          // Devolvemos los roles del autor como un string separados por comas
+    }
+    
+    /**
+     * Add social media fields & profile pic URL to user profile
+     * @param $user_methods   User profile fields
+     * @return $user_methods  User profile fields
+     */
+    function social_media($user_methods) {
+        $user_methods['facebook']  = 'Facebook:';
+        $user_methods['instagram'] = 'Instagram:';
+        $user_methods['linknd']    = 'Linknd:';
+        return $user_methods;
+    }
+    add_action('user_contactmethods', 'social_media');
+    
+    /**
+     * Add skills & profile pic fields in user profile
+     * @param $user user object  
+     */
+    function add_user_extra_information($user) {
+        // Dibujar los campos extra con etiquetas html
+        $profile_pic_url = get_user_meta($user->ID, 'user_pic', true);
+        if(empty($profile_pic_url)) {
+            // No hay foto de perfil
+            $src = get_template_directory_uri().'/assets/images/phototour/user.jpg';
+        } else {
+            // Si hay foto de perfil
+            $src = $profile_pic_url;
+        }
+        ?>
+            <h3>User profile extra information</h3>
+            <div class="flex-profile-pic">
+                <div class="flex-group">
+                    <img src="<?php echo $src;?>" id="previewImg" height="200">
+                    <?php echo '<br/>'.$src.'<br/>';?>
+                </div>
+                <div class="flex-serverimg">
+                    <input type="file" name="user_pic" id="user_pic">
+                </div>
+            </div>
+        <?php
+    }
+    // Los nuevos campos deben aparecer tanto cuando vea el perfil como cuando lo edite
+    add_action('show_user_profile', 'add_user_extra_information');
+    add_action('edit_user_profile', 'add_user_extra_information');
+    
+    /**
+     * Save profile pic & skills fields values in user profile
+     * @param $user_id user object  
+     */
+    function save_extra_user_information($user_id) {
+        $user = get_userdata($user_id);  // Obtengo la informacion del usuario
+        $username = $user->user_login;   // Obtengo el nombre con el que hace login el usuario para asegurarme que es unico
+        // Comprobar que el archivo se ha subido correctamente
+        if($_FILES['user_pic']['error'] == UPLOAD_ERR_OK) {
+            $upload_dir = wp_upload_dir();  // Obtenemos el directorio para subidas de archivo de WP - NO ACABA EN /
+            $subdir = '/team/';             // Porción de la ruta que apunta a la carpeta donde hay que subir los archivos de la imagen del lugar
+            $upload_path = $upload_dir['baseurl'].$subdir;
+            $file_name = $username.'-'.$_FILES['user_pic']['name'];
+            $origen = $_FILES['user_pic']['tmp_name'];
+            $destino = $upload_path.$file_name;
+            if(move_uploaded_file($origen, $destino)) {
+                // El archivo se ha movido a nuestra carpeta /upload/team correctamente
+                // Guardamos en el meta campo la url del archivo
+                update_user_meta($user_id, 'user_pic', $destino);
+            } else {
+                // En caso contrario por alguna raazón el archivo no se ha podido mover
+                // Guardamos en el meta campo el error o podemos no grabar nada
+                $myerror = '<br/>Error en la subida del archivo: '.$_FILES['user_pic']['name'].'<br/>';
+                update_user_meta($user_id, 'user_pic', $myerror);
+            }
+        }
+    }
+    add_action('personal_options_update', 'save_extra_user_information');
+    add_action('edit_user_profile_update', 'save_extra_user_information');
+    
+    /*
+    *   Add skill fields in user profile
+    *   @param  $user user object Nos lo proveen dos hooks ('show_user_profile' y 'edit_user_profile')
+    */
+    function add_skills_fields($user) {
+        // Añadimos las skills como campos de formulario con etiquetas HTML
+        ?>
+            <h3>User Skills information</h3>
+            <table class="form-table">
+                <tr>
+                    <th><label for="skill1">Skill 1 Description</label></th>
+                    <td>
+                        <input type="text" name="skill1" id="skill1" value="<?php echo esc_attr(get_the_author_meta('skill1', $user->ID)); ?>">
+                    </td>
+                    <th><label for="skill1V">Skill 1 Value</label></th>
+                    <td>
+                        <input type="text" name="skill1V" id="skill1V" value="<?php echo esc_attr(get_the_author_meta('skill1V', $user->ID)); ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="skill2">Skill 2 Description</label></th>
+                    <td>
+                        <input type="text" name="skill2" id="skill2" value="<?php echo esc_attr(get_the_author_meta('skill2', $user->ID)); ?>">
+                    </td>
+                    <th><label for="skill2V">Skill 2 Value</label></th>
+                    <td>
+                        <input type="text" name="skill2V" id="skill2V" value="<?php echo esc_attr(get_the_author_meta('skill2V', $user->ID)); ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="skill3">Skill 3 Description</label></th>
+                    <td>
+                        <input type="text" name="skill3" id="skill3" value="<?php echo esc_attr(get_the_author_meta('skill3', $user->ID)); ?>">
+                    </td>
+                    <th><label for="skill3V">Skill 3 Value</label></th>
+                    <td>
+                        <input type="text" name="skill3V" id="skill3V" value="<?php echo esc_attr(get_the_author_meta('skill3V', $user->ID)); ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="skill4">Skill 4 Description</label></th>
+                    <td>
+                        <input type="text" name="skill4" id="skill4" value="<?php echo esc_attr(get_the_author_meta('skill4', $user->ID)); ?>">
+                    </td>
+                    <th><label for="skill4V">Skill 4 Value</label></th>
+                    <td>
+                        <input type="text" name="skill4V" id="skill4V" value="<?php echo esc_attr(get_the_author_meta('skill4V', $user->ID)); ?>">
+                    </td>
+                </tr>
+            </table>
+        <?php
+    }
+    add_action('show_user_profile', 'add_skills_fields');
+    add_action('edit_user_profile', 'add_skills_fields');
+    
+    /*
+    *   Save skills fields values in user profile
+    *   @param  $user user object Nos lo proveen dos hooks ('personal_options_update' y 'edit_user_profile_update')
+    */
+    function save_skills_fields( $user_id) {
+        update_user_meta($user_id, 'skill1', $_POST['skill1']);
+        update_user_meta($user_id, 'skill1V', $_POST['skill1V']);
+        
+        update_user_meta($user_id, 'skill2', $_POST['skill2']);
+        update_user_meta($user_id, 'skill2V', $_POST['skill2V']);
+        
+        update_user_meta($user_id, 'skill3', $_POST['skill3']);
+        update_user_meta($user_id, 'skill3V', $_POST['skill3V']);
+        
+        update_user_meta($user_id, 'skill4', $_POST['skill4']);
+        update_user_meta($user_id, 'skill4V', $_POST['skill4V']);
+    }
+    add_action('personal_options_update', 'save_skills_fields');
+    add_action('edit_user_profile_update', 'save_skills_fields');

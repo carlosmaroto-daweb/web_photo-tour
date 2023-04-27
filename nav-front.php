@@ -31,7 +31,7 @@
                             <a href="#">Links</a>
                             <ul>
                                 <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-                                <li><a href="<?php echo get_page_link(get_page_object('About')->ID);?>">About Us</a></li>
+                                <li><a href="#">About Us</a></li>
                                 <li><a href="#">Contact Us</a></li>
                                 <li><a href="<?php echo get_page_link(get_page_object('Private')->ID);?>"><i class="icon-user"></i>Login</a></li>
                             </ul>

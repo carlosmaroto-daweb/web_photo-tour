@@ -30,7 +30,7 @@
         <div class="container">
 
             <!-- Masonry Container -->
-            <div class="entry-container max-col-3">
+            <div class="entry-container masonry max-col-3">
 
                 <!-- Last Entries -->
                 <div class="entry-item lifestyle shopping col-sm-6 col-lg-4">
@@ -160,7 +160,7 @@
                                                 );
                                                 $posts_by_author = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
                                                 if(empty($posts_by_author)) {
-                                                    echo "No posts published yet";
+                                                    echo "No posts published yet...";
                                                 } else {
                                                     foreach($posts_by_author as $my_post) {
                                                         echo '<li><a href="'.get_permalink($my_post->ID).'">'.$my_post->post_title.'</a></li>';
@@ -269,7 +269,7 @@
                                     <?php
                                         $args = array (
                                             'post_per_page'  => 15,               // Limite de 15 post
-                                            'order_by'       => 'comment_count',  // Ordenador según el número de post
+                                            'orderby'        => 'comment_count',  // Ordenados según el número de post
                                             'order'          => 'DESC'            // Ordenados de más a menos
                                         );
                                         $most_commented = new WP_Query($args);
@@ -289,7 +289,7 @@
                     </article>
                 </div>
                 
-                <!--  -->
+                <!-- Most Popular Posts -->
                 <div class="entry-item lifestyle shopping col-sm-6 col-lg-4">
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
@@ -299,7 +299,20 @@
                             <div class="entry-meta">
                                 <ul class="list-post-count">
                                     <?php
-                                    
+                                        $args = array(
+                                            'post_per_page' => 15,                // Mostramos como máximo 15
+                                            'meta_key'      => 'numvisits',       // Meta campo que vamos a usar como criterio de búsqueda
+                                            'orderby'       => 'meta_value_num',  // Ordenamos por el valor númerico que tenga ese campo
+                                            'order'         => 'DESC',            // De más visitas a menos visitas
+                                        );
+                                        $popular = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
+                                        if(empty($popular)) {
+                                            echo "No posts published yet...";
+                                        } else {
+                                            foreach($popular as $my_post) {
+                                                echo '<li><a href="'.get_permalink($my_post->ID).'">'.$my_post->post_title.'<span class="badge pull-right">'.$my_post->numvisits.'</span></a></li>';
+                                            }
+                                        }
                                     ?>
                                 </ul>
                             </div>
