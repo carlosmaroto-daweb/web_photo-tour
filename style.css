@@ -454,6 +454,56 @@ a:hover .badge {
     height: 75vh;
 }
 
+.form-box {
+    padding: 3.7rem 6rem 3.7rem;
+}
+
+.form-tab .form-footer {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.1rem solid #ebebeb;
+    margin-bottom: 0rem;
+}
+
 .logged h3, .logged h5 {
     color: white;
+}
+
+.elements {
+    width: 75%;
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.element p {
+    color: white;
+}
+
+.element:hover p {
+    color: var(--main-color);
+}
+
+.dashicons-dashboard {
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.element:hover .dashicons-dashboard {
+    color: var(--main-color);
+}
+
+.dashicons-admin-users {
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.element:hover .dashicons-admin-users {
+    color: var(--main-color);
 }

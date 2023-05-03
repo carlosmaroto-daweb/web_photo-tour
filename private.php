@@ -41,50 +41,48 @@
                             <div class="tab-content">
                                 
                                 <!-- Login Form -->
-                                <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
-                                    <form action="#">
+                                <div class="tab-pane fade show active" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
+                                    <form name="loginform" id="loginform" action="<?php echo home_url('/')."wp-login.php";?>" method="post">
                                         <div class="form-group">
-                                            <label for="singin-email-2">Username or email address *</label>
-                                            <input type="text" class="form-control" id="singin-email-2" name="singin-email" required>
+                                            <label for="user_login">Username or Email Address *</label>
+                                            <input type="text" name="log" id="user_login" autocomplete="username" class="form-control" size="20" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="singin-password-2">Password *</label>
-                                            <input type="password" class="form-control" id="singin-password-2" name="singin-password" required>
+                                            <label for="user_pass">Password *</label>
+                                            <input type="password" name="pwd" id="user_pass" autocomplete="current-password" spellcheck="false" class="form-control"  size="20" required>
                                         </div>
                                         <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
+                                            <button type="submit" name="wp-submit" id="wp-submit" class="btn btn-outline-primary-2">
                                                 <span>LOG IN</span>
                                                 <i class="icon-long-arrow-right"></i>
                                             </button>
+                                            <input type="hidden" name="redirect_to" value="<?php echo get_page_link(get_page_object('Private')->ID);?>">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember-2">
-                                                <label class="custom-control-label" for="signin-remember-2">Remember Me</label>
+                                                <input name="rememberme" type="checkbox" id="rememberme" class="custom-control-input" value="forever">
+                                                <label class="custom-control-label" for="rememberme">Remember Me</label>
                                             </div>
-                                            <a href="#" class="forgot-link">Forgot Your Password?</a>
                                         </div>
                                     </form>
                                 </div>
                                 
                                 <!-- Register Form -->
-                                <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
-                                    <form action="#">
+                                <div class="tab-pane fade" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
+                                    <form name="registerform" id="registerform" action="<?php echo home_url('/')."wp-login.php?action=register";?>" method="post" novalidate="novalidate">
                                         <div class="form-group">
-                                            <label for="register-email-2">Your email address *</label>
-                                            <input type="email" class="form-control" id="register-email-2" name="register-email" required>
+                                            <label for="user_login">Username *</label>
+                                            <input type="text" name="user_login" id="user_login" class="form-control" size="20" autocapitalize="off" autocomplete="username" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="register-password-2">Password *</label>
-                                            <input type="password" class="form-control" id="register-password-2" name="register-password" required>
+                                            <label for="user_email">Email *</label>
+                                            <input type="email" name="user_email" id="user_email"  class="form-control" size="25" autocomplete="email" required>
                                         </div>
                                         <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>SIGN UP</span>
+                                            <button type="submit" name="wp-submit" id="wp-submit" class="btn btn-outline-primary-2">
+                                                <span>REGISTER</span>
                                                 <i class="icon-long-arrow-right"></i>
                                             </button>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                                <label class="custom-control-label" for="register-policy-2">I agree to the <a href="#">privacy policy</a> *</label>
-                                            </div>
+                                            <input type="hidden" name="redirect_to" value="<?php echo get_page_link(get_page_object('Private')->ID);?>">
+                                            <p>Registration confirmation will be emailed.</p>
                                         </div>
                                     </form>
                                 </div>
@@ -104,21 +102,19 @@
                             <h3>Hello <span class="main-color"><?php echo $nombre;?></span>!</h3>
                             <h5>You are <span class="main-color"><?php echo $rol;?></span></h5>
                         </div>
-                        <div class="col-xl-5col col-lg-4 col-md-3 col-6">
-                            <a href="#" class="element-type">
+                        <div class="col-6">
+                            <a href="<?php echo admin_url();?>" class="element-type">
                                 <div class="element">
-                                    <i class="element-img"></i>
-                                    <i class="element-hover-img"></i>
-                                    <p>ADMIN AREA</p>
+                                    <span class="dashicons dashicons-dashboard"></span>
+                                    <p>Admin Area</p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xl-5col col-lg-4 col-md-3 col-6">
-                            <a href="#" class="element-type">
+                        <div class="col-6">
+                            <a href="<?php echo wp_logout_url(get_permalink());?>" class="element-type">
                                 <div class="element">
-                                    <i class="element-img"></i>
-                                    <i class="element-hover-img"></i>
-                                    <p>LOG OUT</p>
+                                    <span class="dashicons dashicons-admin-users"></span>
+                                    <p>Log Out</p>
                                 </div>
                             </a>
                         </div>

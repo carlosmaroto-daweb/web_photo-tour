@@ -417,6 +417,14 @@
     add_action('edit_user_profile', 'add_user_extra_information');
     
     /**
+     * Hacemos que el form del user profile tenga atributo enctype 
+     */
+    function add_entype_user_form() {
+        echo 'enctype="multipart/form-data"';
+    }
+    add_action('user_edit_form_tag', 'add_entype_user_form');
+    
+    /**
      * Save profile pic & skills fields values in user profile
      * @param $user_id user object  
      */
@@ -530,3 +538,47 @@
     }
     add_action('personal_options_update', 'save_skills_fields');
     add_action('edit_user_profile_update', 'save_skills_fields');
+    
+    /* ································································································ LOGIN FORM ·············*/
+    
+    /**
+     * Change login template logo
+     */
+    function change_login_logo() {
+        ?>
+            <style>
+                #login h1 a, .login h1 a {
+                    background-image: url("<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png");
+                    width: 300px;
+                    height: 140px;
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                
+                .login {
+                    background-image: url("<?php echo bloginfo('template_directory');?>/assets/images/phototour/background-private.jpg");
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            </style>
+        <?php
+    }
+    add_action('login_enqueue_scripts', 'change_login_logo');
+    
+    /**
+     * Redirect login logo url
+     */
+    function redirect_logo() {
+        return home_url('/');
+    }
+    add_filter('login_headerurl', 'redirect_logo');
+    
+    /**
+     * Change login error message
+     */
+    function change_login_error_message() {
+        return 'Ooooops! You must enter a valid username and password...';
+    }
+    add_filter('login_errors', 'change_login_error_message');
