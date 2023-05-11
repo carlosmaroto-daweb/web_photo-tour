@@ -7,6 +7,24 @@
 ?>
 
 <main class="main">
+
+    <!-- Page Header -->
+    <div class="page-header text-center" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/reviews-bg.jpeg')">
+        <div class="container">
+            <h1 class="page-title">Surf my Reviews<span>Latest Posts</span></h1>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-5">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Reviews</li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Last entries -->
     <div class="page-content">
         <div class="container">
@@ -59,6 +77,10 @@
                                         <div class="entry-cats">
                                             in <?php the_category(' & ');?>
                                         </div>
+                                        <?php
+                                            // Aqui tiene que mostrar los custom fields el shortcode
+                                            do_shortcode('[mpm_show_main_fields id="'.$post->ID.'"]');
+                                        ?>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
                                             <a href="<?php the_permalink();?>" class="read-more">Continue Reading</a>
