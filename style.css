@@ -447,7 +447,6 @@ a:hover .badge {
     color: var(--main-color) !important;
 }
 
-
 /****************************************  PRIVATE *****************************************/
 
 .mh75 {
@@ -506,4 +505,61 @@ a:hover .badge {
 
 .element:hover .dashicons-admin-users {
     color: var(--main-color);
+}
+
+/****************************************  PAGINATION *****************************************/
+
+.nav-links .page-numbers{
+    margin-left: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 400 !important;
+    min-width: 3rem;
+    height: 4rem;
+    padding: 0 0.3rem;
+    line-height: 1;
+    color: #706f6c;
+    border: 0.1rem solid transparent;
+    border-radius: 0.3rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links .page-numbers:hover{
+    color: var(--main-color) !important;
+    border: 0.1rem solid #ebebeb;
+}
+
+.nav-links .current {
+    color: var(--main-color) !important;
+    border: 0.1rem solid #ebebeb;
+}
+
+.nav-links .next {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 70px;
+    margin-left: 1.8rem;
+}
+
+.nav-links .next:after {
+    content: '\f274';
+    font-family: "molla";
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.nav-links .prev {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 70px;
+    margin-right: 1.8rem;
+}
+
+.nav-links .prev:before {
+    content: '\f273';
+    font-family: "molla";
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }

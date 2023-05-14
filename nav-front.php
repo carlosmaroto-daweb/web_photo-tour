@@ -62,10 +62,7 @@
                                 <a href="<?php echo home_url('/');?>">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="white-text">Shop</a>
-                            </li>
-                            <li>
-                                <a href="#" class="white-text">Product</a>
+                                <a href="#" class="white-text">Tours</a>
                             </li>
                             <li>
                                 <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>" class="white-text">Reviews</a>

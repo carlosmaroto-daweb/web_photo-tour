@@ -116,8 +116,7 @@
 								<h4 class="widget-title">Explore</h4>
 								<ul class="widget-list">
 									<li><a href="<?php echo home_url('/');?>">Home</a></li>
-									<li><a href="#">Shop</a></li>
-									<li><a href="#">Product</a></li>
+									<li><a href="#">Tours</a></li>
 									<li><a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a></li>
 									<li><a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>">Blog</a></li>
 									<li><a href="<?php echo get_page_link(get_page_object('Archives')->ID);?>">Archives</a></li>
@@ -165,10 +164,7 @@
                         <a href="<?php echo home_url('/');?>">Home</a>
                     </li>
                     <li>
-                        <a href="#">Shop</a>
-                    </li>
-                    <li>
-                        <a href="#">Product</a>
+                        <a href="#">Tours</a>
                     </li>
                     <li>
                         <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Reviews</a>

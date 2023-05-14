@@ -93,12 +93,18 @@
                     <!-- Aquí comienza el bucle-->
                     <?php
                         $args = array(
-                            'posts_per_page' => 5,                         // Queremos 5 post por página
-                            'post_type'      => array('post'),             // Solo queremos el estandar
-                            'post__not_in'   => array($post_destacado_ID)  // Excluimos el post destacado
+                            'posts_per_page' => 5,                                                     // Queremos 5 post por página
+                            'post_type'      => array('post'),                                         // Solo queremos el estandar
+                            'post__not_in'   => array($post_destacado_ID),                             // Excluimos el post destacado
+                            'paged'          => get_query_var('paged') ? get_query_var('paged') : 1,   // Indicamos en qué página estamos
                         );
                         $latest_posts = new WP_Query($args);
                         
+                        // Pagination fix
+                        $temp_query = $wp_query;
+                        $wp_query = NULL;
+                        $wp_query = $latest_posts;
+
                         if($latest_posts->have_posts()):
                             while($latest_posts->have_posts()):
                                 $latest_posts->the_post();
@@ -146,30 +152,26 @@
                     <!-- Aquí termina el bucle-->
                     <?php
                             endwhile;
+                            
+                            wp_reset_postdata();
+    
+                            // Page Navigation
+                            the_posts_pagination( array(
+                                'prev_text'          => __( 'Prev', 'your-theme' ),
+                                'next_text'          => __( 'Next', 'your-theme' ),
+                                'mid_size'           => 3,
+                                'end_size'           => 2,
+                            ) );
+    
+                            // Reset main query object
+                            $wp_query = NULL;
+                            $wp_query = $temp_query;
                         else:
                             echo 'No posts published yet...';
                         endif;
                         
                         wp_reset_query();
                     ?>
-
-                    <!-- Page Navigation -->
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a class="page-link page-link-prev" href="#" aria-label="Previous" tabindex="-1" aria-disabled="true">
-                                    <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>Prev
-                                </a>
-                            </li>
-                            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item">
-                                <a class="page-link page-link-next" href="#" aria-label="Next">
-                                    Next <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
 
                 <!-- Sidebar -->
