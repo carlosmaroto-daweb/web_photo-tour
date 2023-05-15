@@ -57,32 +57,38 @@
             <div class="row justify-content-center social-network">
                 <div class="col-lg-4 col-sm-6">
                     <div class="icon-box icon-box-sm text-center">
-                        <span class="icon-box-icon">
-                            <i class="icon-facebook"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">Facebook</h3>
-                        </div>
+                        <a href="<?php echo get_user_meta($curauth->ID, 'facebook', true)?>" class="icon-box-link">
+                            <span class="icon-box-icon">
+                                <i class="icon-facebook"></i>
+                            </span>
+                            <div class="icon-box-content">
+                                <h3 class="icon-box-title">Facebook</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="icon-box icon-box-sm text-center">
-                        <span class="icon-box-icon">
-                            <i class="icon-instagram"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">Instagram</h3>
-                        </div>
+                        <a href="<?php echo get_user_meta($curauth->ID, 'instagram', true)?>" class="icon-box-link">
+                            <span class="icon-box-icon">
+                                <i class="icon-instagram"></i>
+                            </span>
+                            <div class="icon-box-content">
+                                <h3 class="icon-box-title">Instagram</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="icon-box icon-box-sm text-center">
-                        <span class="icon-box-icon">
-                            <i class="icon-linkedin"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h3 class="icon-box-title">Linkedin</h3>
-                        </div>
+                        <a href="<?php echo get_user_meta($curauth->ID, 'linknd', true)?>" class="icon-box-link">
+                            <span class="icon-box-icon">
+                                <i class="icon-linkedin"></i>
+                            </span>
+                            <div class="icon-box-content">
+                                <h3 class="icon-box-title">LinkedIn</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

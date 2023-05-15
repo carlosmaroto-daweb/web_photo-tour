@@ -17,6 +17,30 @@ Domain Path: /languages
     --main-color: #fcb941;
 }
 
+.main-color {
+    color: var(--main-color);
+}
+
+.white-text {
+    color: white !important;
+}
+
+.white-text:hover {
+    color: var(--main-color) !important;
+}
+
+.black-text {
+    color: black !important;
+}
+
+.black-text:hover {
+    color: var(--main-color) !important;
+}
+
+.dark-background {
+    background-color: #333 !important;
+}
+
 .no-padding-lr {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -40,7 +64,6 @@ Domain Path: /languages
 
 .entry-title a:hover {
     color: var(--main-color) !important;
-    font-weight: 600 !important;
 }
 
 .entry-media img {
@@ -67,27 +90,7 @@ a:hover .badge {
     float: right;
 }
 
-/******************************************  NAV ******************************************/
-
-.white-text {
-    color: white !important;
-}
-
-.white-text:hover {
-    color: var(--main-color) !important;
-}
-
-.black-text {
-    color: black !important;
-}
-
-.black-text:hover {
-    color: var(--main-color) !important;
-}
-
-.dark-background {
-    background-color: #333 !important;
-}
+/******************************************  NAVS ******************************************/
 
 .background {
     height: 100vh !important;
@@ -105,7 +108,7 @@ a:hover .badge {
     background-color: unset;
 }
 
-/*****************************************  INDEX ******************************************/
+/*****************************************  INDEX / REVIEWS ******************************************/
 
 .newsletter {
     width: 100% !important;
@@ -153,7 +156,7 @@ a:hover .badge {
 
 /***************************************  FRONT-PAGE ***************************************/
 
-.title h3 {
+.slider h3 {
     font-size: 1.7rem;
     font-weight: 600;
 }
@@ -162,7 +165,22 @@ a:hover .badge {
     padding-top: 0px;
 }
 
-/*****************************************  SINGLE *****************************************/
+/*****************************************  SINGLES *****************************************/
+
+.related-posts .entry-title {
+    margin-bottom: 5px;
+}
+
+.related-posts .entry-title a {
+    color: black !important;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.related-posts .entry-title a:hover {
+    color: var(--main-color) !important;
+}
 
 .single-thumb {
     height: 50vh !important;
@@ -317,10 +335,6 @@ a:hover .badge {
 
 /****************************************  SIDEBAR *****************************************/
 
-.wp-calendar-nav {
-    display: none;
-}
-
 .miniatura {
     width: 60px !important;
     height: 60px !important;
@@ -347,7 +361,7 @@ a:hover .badge {
     color: var(--main-color) !important;
 }
 
-/****************************************  SEARCH *****************************************/
+/****************************************  SEARCH / ARCHIVE *****************************************/
 
 .key {
     font-weight: 600;
@@ -365,16 +379,21 @@ a:hover .badge {
     object-position: center center;
 }
 
-.button-type-page .post-type-page {
+.post-type-button p {
     color: var(--main-color);
 }
 
-.button-type-page:hover .post-type-page {
-    color: #fff;
+.post-type-button:hover p {
+    color: #fff !important;
 }
 
-.dashicons-media-spreadsheet {
-    margin-left: 0.7rem;
+.post-type-button span {
+    margin-left: 10px;
+    color: var(--main-color);
+}
+
+.post-type-button:hover span {
+    color: #fff !important;
 }
 
 /****************************************  ARCHIVES *****************************************/
@@ -384,11 +403,9 @@ a:hover .badge {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.entry-item .entry-title a {
-    font-size: 1.5em;
-}
-
-.entry-title {
+.masonry .entry-title {
+    font-size: 2em !important;
+    text-transform: uppercase;
     border-bottom: 1px dotted rgba(99,99,99,.5) !important;
     padding-bottom: 10px !important;
 }
@@ -397,32 +414,66 @@ a:hover .badge {
     text-align: left;
 }
 
-.list-post li {
-    margin-top: 10px;
-    font-size: 1.5rem !important;
-}
-
-.list-post li::before {
-    content: "\f112";
-    font-family: 'molla';
-}
-
-.list-post li:hover::before {
-    color: var(--main-color);
-}
-
 .list-post-count{
     width: 70%;
     text-align: left;
 }
 
-.list-post-count li {
+.list-post li, .list-post-count li {
     margin-top: 10px;
     font-size: 1.5rem !important;
 }
 
-.main-color {
+.list-post li:hover::before, .list-post-count li:hover::before  {
     color: var(--main-color);
+}
+
+.masonry .last-entries li::before {
+    margin-right: 5px;
+    content: "\f112";
+    font-family: 'molla';
+}
+
+.masonry .last-reviews li::before {
+    margin-right: 5px;
+    content: "\f1c1";
+    font-family: 'molla';
+}
+
+.masonry .categories li::before {
+    margin-right: 5px;
+    content: "\f150";
+    font-family: 'molla';
+}
+
+.masonry .tags li::before {
+    margin-right: 5px;
+    content: "\f331";
+    font-family: 'molla';
+}
+
+.masonry .authors li::before {
+    margin-right: 5px;
+    content: "\f364";
+    font-family: 'molla';
+}
+
+.masonry .calendar li::before {
+    margin-right: 5px;
+    content: "\f15c";
+    font-family: 'molla';
+}
+
+.masonry .commented li::before {
+    margin-right: 8px;
+    content: "\e817";
+    font-family: 'molla';
+}
+
+.masonry .popular li::before {
+    margin-right: 5px;
+    content: "\e814";
+    font-family: 'molla';
 }
 
 /****************************************  AUTHOR *****************************************/
@@ -434,17 +485,41 @@ a:hover .badge {
 }
 
 .social-network .icon-box-title {
-    color: #777;;
+    color: #777;
 }
 
 .member-content .black-text {
-    text-transform: uppercase;
-    font-size: 2em;
     color: black !important;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 .member-content .black-text:hover {
     color: var(--main-color) !important;
+}
+
+.icon-box-link{
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: all .35s ease;
+}
+
+.icon-box-link:hover{
+    background-color: #c96;
+}
+
+.icon-box-link .icon-box-icon, .icon-box-link .icon-box-content h3 {
+    position: relative;
+    top: 20px;
+    transition: all .35s ease;
+}
+
+.icon-box-link:hover .icon-box-icon, .icon-box-link:hover .icon-box-content h3 {
+    color: white;
 }
 
 /****************************************  PRIVATE *****************************************/

@@ -45,8 +45,8 @@
         			<div class="toolbox">
         				<div class="toolbox-left">
         					<div class="toolbox-info">
-        						Showing: <span><?php echo $results?></span>
-        					</div><
+        						Showing: <span><?php echo $results;?></span>
+        					</div>
         				</div>
         			</div>
 
@@ -60,7 +60,7 @@
     								<th>Post</th>
     								<th>Published on</th>
     								<th>Author</th>
-    								<th>Status</th>
+    								<th>Type</th>
     								<th></th>
     							</tr>
     						</thead>
@@ -86,7 +86,7 @@
                 								<td class="product-col">
                 									<div class="product">
                 										<figure class="product-media">
-                											<a href="#">
+                											<a href="<?php the_permalink();?>">
                 												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
                 											</a>
                 										</figure>
@@ -98,18 +98,27 @@
                 								<td class="price-col"><?php the_time('j, M Y');?></td>
                 								<td class="stock-col"><span class="in-stock"><?php the_author();?></span></td>
                 								<td class="action-col">
-                								    <?php
+													<?php
                 								        if($post->post_type != 'page') {
+															if($post->post_type == 'post'){
+													?>
+															<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
+																<p>BLOG POST</p><span class="dashicons dashicons-media-document"></span>
+                                                            </a>
+													<?php
+															}
+															else if ($post->post_type == 'mpm_reviews') {
                 								    ?>
-                        									<button class="btn btn-block btn-outline-primary-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                STATUS
-                                                            </button>
+																<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
+																	<p>REVIEW POST</p><span class="dashicons dashicons-welcome-write-blog"></span>
+																</a>
                 								    <?php
+															}
                 								        } else {
                 								    ?>
-                        									<button class="btn btn-block btn-outline-primary-2 button-type-page" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <p class="post-type-page">PAGE</p><span class="dashicons dashicons-media-spreadsheet"></span>
-                                                            </button>
+                        									<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
+                                                                <p>PAGE</p><span class="dashicons dashicons-media-default"></span>
+															</a>
                 								    <?php
                 								        }
                 								    ?>

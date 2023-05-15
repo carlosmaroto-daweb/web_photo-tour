@@ -35,7 +35,7 @@
         <h3 class="widget-title">Categories</h3>
         <ul>
             <?php 
-                $my_categories = wp_list_categories('title_li=&show_count=1&echo=0&orderby=count&order=DESC&number=15');
+                $my_categories = wp_list_categories('title_li=&show_count=1&echo=0&orderby=count&order=DESC&number=10');
                 $my_categories =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_categories);
                 echo $my_categories;
             ?>
@@ -97,6 +97,7 @@
                     'optioncount' => true,          // Visualiza el número de posts publicados por el autor
                     'orderby'     => 'post_count',  // Ordena según el número de post publicados
                     'order'       => 'DESC',        // Ordena de mayor a menor
+                    'number'      => 10,            // Limita la salida a 10 autores
                 );
                 $my_authors = wp_list_authors($args);
                 $my_authors =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_authors);

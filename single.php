@@ -131,7 +131,7 @@
                                             $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                                         }
                             ?>
-                                        <!-- Newsletter -->
+                                        <!-- Article -->
                                         <article class="entry entry-grid">
                                             <figure class="entry-media">
                                                 <a href="<?php the_permalink();?>">
@@ -140,7 +140,7 @@
                                             </figure>
                                             <div class="entry-body">
                                                 <div class="entry-meta">
-                                                    <a href="#"><?php the_time('j, M Y');?></a>
+                                                    <?php the_time('j, M Y');?>
                                                     <span class="meta-separator">|</span>
                                                     <a href="<?php the_permalink();?>"><?php comments_number('No comments', 'One comment', '% comments');?></a>
                                                 </div>

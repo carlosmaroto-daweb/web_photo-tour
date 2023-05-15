@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Wishlist and Cart -->
                 <div class="header-right">
                     <div class="wishlist">
                         <a href="#" title="Wishlist">
@@ -96,16 +96,16 @@
                                 <div class="product">
                                     <div class="product-cart-details">
                                         <h4 class="product-title">
-                                            <a href="#">Beige knitted elastic runner shoes</a>
+                                            <a href="#">New Zealand</a>
                                         </h4>
                                         <span class="cart-product-info">
                                             <span class="cart-product-qty">1</span>
-                                            x $84.00
+                                            x $6860,00
                                         </span>
                                     </div>
                                     <figure class="product-image-container">
                                         <a href="#" class="product-image">
-                                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/products/cart/product-1.jpg" alt="product">
+                                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/cart1.jpg" alt="New Zealand">
                                         </a>
                                     </figure>
                                     <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -113,16 +113,16 @@
                                 <div class="product">
                                     <div class="product-cart-details">
                                         <h4 class="product-title">
-                                            <a href="#">Blue utility pinafore denim dress</a>
+                                            <a href="#">Myanmar</a>
                                         </h4>
                                         <span class="cart-product-info">
                                             <span class="cart-product-qty">1</span>
-                                            x $76.00
+                                            x $3390,00
                                         </span>
                                     </div>
                                     <figure class="product-image-container">
                                         <a href="#" class="product-image">
-                                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/products/cart/product-2.jpg" alt="product">
+                                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/cart2.jpg" alt="Myanmar">
                                         </a>
                                     </figure>
                                     <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -130,10 +130,10 @@
                             </div>
                             <div class="dropdown-cart-total">
                                 <span>Total</span>
-                                <span class="cart-total-price">$160.00</span>
+                                <span class="cart-total-price">$10250,00</span>
                             </div>
                             <div class="dropdown-cart-action">
-                                <a href="#" class="btn btn-primary">View Cart</a>
+                                <a href="#" class="btn btn-outline-primary-2"><span>View Cart</span><i class="icon-long-arrow-right"></i></a>
                                 <a href="#" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                             </div>
                         </div>

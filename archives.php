@@ -37,10 +37,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Last Entries</a>
+                                Last Entries
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post">
+                                <ul class="list-post last-entries">
                                     <?php
                                         $args = array(
                                             'type'  => 'postbypost', // Devuelve los títulos de los post en lugar de las fechas
@@ -54,17 +54,22 @@
                     </article>
                 </div>
                 
-                <!--  -->
+                <!-- Last Reviews -->
                 <div class="entry-item lifestyle shopping col-sm-6 col-lg-4">
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Last Reviews</a>
+                                Last Reviews
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post">
+                                <ul class="list-post last-reviews">
                                     <?php
-                                    
+                                        $args = array(
+                                            'type'      => 'postbypost',   // Devuelve los títulos de los post en lugar de las fechas
+                                            'limit'     => 15,             // Limita la salida a 15 post
+                                            'post_type' => 'mpm_reviews',  // Solo queremos el custom-post-type
+                                        );
+                                        wp_get_archives($args);
                                     ?>
                                 </ul>
                             </div>
@@ -77,10 +82,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Categories</a>
+                                Categories
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count categories">
                                     <?php
                                         $my_categories = wp_list_categories('title_li=&show_count=1&echo=0&orderby=count&order=DESC&number=15');
                                         $my_categories =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_categories);
@@ -97,10 +102,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Tags</a>
+                                Tags
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count tags">
                                     <?php
                                         get_list_tag(15);
                                     ?>
@@ -115,10 +120,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Authors</a>
+                                Authors
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count authors">
                                     <?php
                                         $args = array(
                                             'echo'        => false,         // No visualiza el listado de los autores, sino que nos lo devuelve para ser almacenado en una variable
@@ -126,6 +131,7 @@
                                             'optioncount' => true,          // Visualiza el número de posts publicados por el autor
                                             'orderby'     => 'post_count',  // Ordena según el número de post publicados
                                             'order'       => 'DESC',        // Ordena de mayor a menor
+                                            'number'      => 15,            // Limita la salida a 15 autores
                                         );
                                         $my_authors = wp_list_authors($args);
                                         $my_authors =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_authors);
@@ -150,13 +156,14 @@
                             <article class="entry entry-grid text-center">
                                 <div class="entry-body">
                                     <h2 class="entry-title">
-                                        <a href="#">Post by <span class="main-color"><?php echo $author->display_name;?></span></a>
+                                        Post by <span class="main-color"><?php echo $author->display_name;?></span>
                                     </h2>
                                     <div class="entry-meta">
-                                        <ul class="list-post">
+                                        <ul class="list-post last-entries">
                                             <?php
                                                 $args = array(
-                                                    'author' => $author->ID,
+                                                    'post_per_page' => 15,           // Mostramos como máximo 15
+                                                    'author'        => $author->ID,  // Post que ha escrito ese autor
                                                 );
                                                 $posts_by_author = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
                                                 if(empty($posts_by_author)) {
@@ -181,10 +188,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Daily Archives</a>
+                                Daily Archives
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count calendar">
                                     <?php
                                         $args = array(
                                             'type'            => 'daily',   // Fechas por dias
@@ -208,15 +215,15 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Monthly Archives</a>
+                                Monthly Archives
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count calendar">
                                     <?php
                                         $args = array(
                                             'type'            => 'monthly',   // Fechas por mes
                                             'show_post_count' => true,        // Número de posts publicados ese mes
-                                            'limit'           => 15,        // Máximo 15 fechas
+                                            'limit'           => 15,          // Máximo 15 fechas
                                             'echo'            => false,
                                         );
                                         $monthly = wp_get_archives($args);
@@ -235,15 +242,15 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Yearly Archives</a>
+                                Yearly Archives
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count calendar">
                                     <?php
                                         $args = array(
                                             'type'            => 'yearly',   // Fechas por año
                                             'show_post_count' => true,       // Número de posts publicados ese año
-                                            'limit'           => 15,        // Máximo 15 fechas
+                                            'limit'           => 15,         // Máximo 15 fechas
                                             'echo'            => false,
                                         );
                                         $yearly = wp_get_archives($args);
@@ -262,10 +269,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Most Commented Posts</a>
+                                Most Commented Posts
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count commented">
                                     <?php
                                         $args = array (
                                             'post_per_page'  => 15,               // Limite de 15 post
@@ -294,10 +301,10 @@
                     <article class="entry entry-grid text-center">
                         <div class="entry-body">
                             <h2 class="entry-title">
-                                <a href="#">Most Popular Posts</a>
+                                Most Popular Posts
                             </h2>
                             <div class="entry-meta">
-                                <ul class="list-post-count">
+                                <ul class="list-post-count popular">
                                     <?php
                                         $args = array(
                                             'post_per_page' => 15,                // Mostramos como máximo 15

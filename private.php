@@ -22,7 +22,7 @@
     <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17 mh75" style="background-image: url('<?php echo bloginfo('template_directory');?>/assets/images/phototour/background-private.jpg')">
         <div class="container">
             
-            <!-- User Logged -->
+            <!-- User Not Logged -->
             <?php
                 if(!is_user_logged_in()) {
             ?>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
 
-            <!-- User Not Logged -->
+            <!-- User Logged -->
             <?php
                 } else {
                     $author = wp_get_current_user();
