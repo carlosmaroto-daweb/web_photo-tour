@@ -163,17 +163,23 @@
                                 <div class="col-sm-6 col-lg-4">
                                     <div class="member member-2 text-center">
                                         <figure class="member-media">
-                                            <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                            <a href="<?php the_permalink();?>">
+                                                <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                            </a>
                                         </figure>
                                         <div class="member-content">
-                                            <h3 class="member-title"><a href="<?php the_permalink();?>" class="black-text"><?php the_title();?></a></br>In <?php the_category(' & ');?></h3>
+                                            <h3 class="member-title mb-1">
+                                                <a href="<?php the_permalink();?>" class="black-text"><?php the_title();?></a>
+                                            </h3>
+                                            <h3 class="member-title">
+                                                In <?php the_category(' & ');?>
+                                            </h3>
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <a href="<?php the_permalink();?>" class="btn btn-sm btn-minwidth-lg btn-outline-primary-2">
-                                            <span>Read More</span>
-                                            <i class="icon-long-arrow-right"></i>
-                                        </a>
+                                        <div class="link-button">
+                                            <a href="<?php the_permalink();?>">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
 

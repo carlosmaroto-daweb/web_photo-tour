@@ -67,7 +67,7 @@
                         }
             ?>
                         <li>
-                            <div class="miniatura" style="background-image: url(<?php echo $PostImg;?>)"></div>
+                            <a href="<?php the_permalink();?>" class="miniatura" style="background-image: url(<?php echo $PostImg;?>)"></a>
                             <div>
                                 <span><?php the_time('j, M Y');?></span>
                                 <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>

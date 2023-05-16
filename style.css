@@ -51,6 +51,28 @@ Domain Path: /languages
     color: var(--main-color) !important;
 }
 
+.link-button a {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
+    background-color: transparent;
+    transition: all .3s;
+    text-shadow: none;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: .1em;
+    border-radius: 0.5rem;
+}
+
+.link-button:hover a {
+    color: #222;
+    background-color: var(--main-color);
+    text-decoration: none;
+}
+
 .page-header h1 {
     color: white;
     text-shadow: 2px 2px 2px #333;
@@ -343,6 +365,10 @@ a:hover .badge {
 }
 
 /****************************************  SIDEBAR *****************************************/
+
+.sidebar {
+    margin-left: 30px;
+}
 
 .miniatura {
     width: 60px !important;

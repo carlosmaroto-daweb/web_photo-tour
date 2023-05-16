@@ -55,6 +55,10 @@
                             <div class="entry-cats">
                                 in <?php the_category();?>
                             </div>
+                            <?php
+                                // Aqui tiene que mostrar los custom fields el shortcode
+                                do_shortcode('[mpm_show_fields id="'.$post->ID.'"]');
+                            ?>
                             <div class="entry-content editor-content">
                                 <p><?php the_content();?></p>
                             </div>

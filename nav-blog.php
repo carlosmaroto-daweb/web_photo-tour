@@ -5,7 +5,7 @@
         <div class="header-top">
             <div class="container">
                 <div class="header-left text-white">
-                    <a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a>
+                    <a href="tel:#"><i class="icon-phone"></i>Call: +34 625 01 44 81</a>
                 </div>
                 <div class="header-right">
                     <ul class="top-menu">

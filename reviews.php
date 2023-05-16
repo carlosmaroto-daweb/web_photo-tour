@@ -89,7 +89,9 @@
                                         ?>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
-                                            <a href="<?php the_permalink();?>" class="read-more">Continue Reading</a>
+                                            <div class="link-button mt-2">
+                                                <a href="<?php the_permalink();?>">Continue Reading</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>

@@ -16,7 +16,7 @@
     </div>
 
     <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav mb-4">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo home_url('/');?>">Home</a></li>
@@ -312,7 +312,7 @@
                                             'orderby'       => 'meta_value_num',  // Ordenamos por el valor númerico que tenga ese campo
                                             'order'         => 'DESC',            // De más visitas a menos visitas
                                         );
-                                        $popular = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
+                                        $popular = get_posts($args);
                                         if(empty($popular)) {
                                             echo "No posts published yet...";
                                         } else {

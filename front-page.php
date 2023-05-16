@@ -14,7 +14,7 @@
     			<h5>Photos + Tours</h5>
     		</div>
     		<div class="action">
-    			<a href="#">discover now</a>
+    			<a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
     		</div>
     	</div>
     </div>
@@ -375,7 +375,7 @@
                             <h4>New Zealand</h4>
                         </div>
                         <div class="action">
-                            <a href="#">Discover Now</a>
+                            <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
                         </div>
                     </div>
                 </div>
@@ -394,7 +394,7 @@
                                 <h4>China</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Discover Now</a>
+                                <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -410,7 +410,7 @@
                                 <h4>Namibia</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Discover Now</a>
+                                <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -426,7 +426,7 @@
                                 <h4>Ladakh</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Discover Now</a>
+                                <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -442,7 +442,7 @@
                                 <h4>Patagonia</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Discover Now</a>
+                                <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -742,11 +742,11 @@
                                     <div class="entry-meta">
                                         <a href="#"><?php the_time('j, M Y');?></a>, <?php comments_number('No comments', 'One comment', '% comments');?>
                                     </div>
-                                    <h3 class="entry-title">
+                                    <h3 class="entry-title mb-2">
                                         <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                     </h3>
-                                    <div class="entry-content">
-                                        <a href="<?php the_permalink();?>" class="read-more">read more</a>
+                                    <div class="link-button mb-2">
+                                        <a href="<?php the_permalink();?>">read more</a>
                                     </div>
                                 </div>
                             </article>

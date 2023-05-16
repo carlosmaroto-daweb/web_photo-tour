@@ -57,7 +57,9 @@
                                             <?php the_category(' & ');?>
                                         </ul>
                                     </h3>
-                                    <a href="<?php the_permalink();?>" class="btn btn-outline-white banner-link underline">Read More</a>
+                                    <div class="link-button">
+                                        <a href="<?php the_permalink();?>">Read More</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-stretch subscribe-div no-padding-lr">
@@ -144,7 +146,9 @@
                                         </div>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
-                                            <a href="<?php the_permalink();?>" class="read-more">Continue Reading</a>
+                                            <div class="link-button mt-2">
+                                                <a href="<?php the_permalink();?>">Continue Reading</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>
