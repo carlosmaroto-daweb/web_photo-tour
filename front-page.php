@@ -76,20 +76,20 @@
 		</div>
     </section>
 
-    <!--  -->
+    <!-- Banners -->
     <section class="banners center">
     	<div class="container">
     		<div class="row">
 
-                <!--  -->
+                <!-- Banner -->
     			<div class="banner col-lg-4 col-md-6 col-sm-6">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-1.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/banner1.jpg">
         			<div class="intro">
         				<div class="title">
         					<h3>Online mega deal</h3>
         				</div>
         				<div class="content">
-        					<h4>Camping Gear<br>& Accessories</h4>
+        					<h4>Cameras<br>& Accessories</h4>
         				</div>
         				<div class="action">
         					<a href="#">Shop Now</a>
@@ -97,19 +97,16 @@
         			</div>
         		</div>
 
-                <!--  -->
+                <!-- Banner -->
         		<div class="banner percent col-lg-4 col-md-6 col-sm-6">
         			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-2.jpg">
         			<div class="intro">
         				<div class="title">
         					<h3>Summer</h3>
-        					<h4>Clearance</h4>
+        					<h4>Sales</h4>
         				</div>
         				<div class="img-percent">
         					<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/percent.png" width="190" height="75">
-        				</div>
-        				<div class="content">
-        					<h4>* Donec sit amet vulputate<br> velit.Aenean tempus nisl</h4>
         				</div>
         				<div class="action">
         					<a href="#">Discover Now</a>
@@ -117,15 +114,15 @@
         			</div>
         		</div>
 
-                <!--  -->
+                <!-- Banner -->
         		<div class="banner col-lg-4  col-md-6 col-sm-6">
-        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-3.jpg">
+        			<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/banner3.jpg">
         			<div class="intro">
         				<div class="title">
         					<h3>Lightning Deals</h3>
         				</div>
         				<div class="content">
-        					<h4>Sports &<br>Outdoors</h4>
+        					<h4>Backpacks</h4>
         				</div>
         				<div class="action">
         					<a href="#">Shop Now</a>
@@ -136,7 +133,7 @@
     	</div>
     </section>
 
-    <!--  -->
+    <!-- Best Sellers -->
     <section class="best-sellers">
     	<div class="container">
     		<div class="heading">
@@ -165,12 +162,12 @@
                     }
                 }'>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-1-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-1-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article1.1.jpg" alt="EOS 5D Mark IV" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article1.2.jpg" alt="EOS 5D Mark IV" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -180,10 +177,10 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">Small Sleeping Bag</a>
+                            	<a href="#">EOS 5D Mark IV</a>
                             </h3>
                             <div class="product-price">
-                                $299.99
+                                $3,599.00
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -197,12 +194,12 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-2-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-2-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article2.1.jpg" alt="EF 24mm f/1.4L II USM" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article2.2.jpg" alt="EF 24mm f/1.4L II USM" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -212,10 +209,10 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">Watertight Jacket</a>
+                            	<a href="#">EF 24mm f/1.4L II USM</a>
                             </h3>
                             <div class="product-price">
-                                $76.99
+                                $1,549.00
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -229,13 +226,13 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                    		<span class="product-label label-sale">sale</span>
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-3-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-3-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article3.1.jpg" alt="Speedlite 600EX II-RT" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article3.2.jpg" alt="Speedlite 600EX II-RT" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -245,11 +242,11 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">Y-3 by Yohji Yamamoto</a>
+                            	<a href="#">Speedlite 600EX II-RT</a>
                             </h3>
                             <div class="product-price">
-                            	<span class="new-price">$239.99</span>
-                            	<span class="old-price">Was $400.00</span>
+                            	<span class="new-price">$499.99</span>
+                            	<span class="old-price">Was $599.99</span>
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -263,12 +260,12 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-4-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-4-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article4.1.jpg" alt="Wireless File Transmitter WFT-E9A" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article4.2.jpg" alt="Wireless File Transmitter WFT-E9A" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -278,10 +275,10 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">Marmot Empire Daypack</a>
+                            	<a href="#">Wireless File Transmitter WFT-E9A</a>
                             </h3>
                             <div class="product-price">
-                                $59.99
+                                $649.99
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -295,12 +292,12 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-5-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-5-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article5.1.jpg" alt="Drop-In Filter Mount Adapter EF-EOS" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article5.2.jpg" alt="Drop-In Filter Mount Adapter EF-EOS" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -310,10 +307,10 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">On Cloudflyer</a>
+                            	<a href="#">Drop-In Filter Mount Adapter EF-EOS</a>
                             </h3>
                             <div class="product-price">
-                                $127.99
+                                $399.99
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -327,12 +324,12 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Article -->
                 <div class="product product-10 text-center">
                     <figure class="product-media">
                         <a href="#">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-6-1.jpg" alt="Product image" class="product-image">
-                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/best-sellers/product-6-2.jpg" alt="Product image" class="product-image-hover">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article6.1.jpg" alt="Refurbished VIXIA HF G60" class="product-image">
+                            <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article6.2.jpg" alt="Refurbished VIXIA HF G60" class="product-image-hover">
                         </a>
                     </figure>
                     <div class="product-body">
@@ -342,10 +339,10 @@
                         </div>
                     	<div class="product-intro">
                             <h3 class="product-title">
-                            	<a href="#">Alphaskin Sport Bra</a>
+                            	<a href="#">Refurbished VIXIA HF G60</a>
                             </h3>
                             <div class="product-price">
-                                $34.99
+                                $1,499.00
                             </div>
                     	</div>
                     	<div class="product-detail">
@@ -355,10 +352,6 @@
                                 </div>
                                 <span class="ratings-text">( 3 Reviews )</span>
                             </div>
-                            <div class="product-nav product-nav-dots">
-                                <a href="#" class="active" style="background: #d64042;"><span class="sr-only">Color name</span></a>
-                                <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                            </div>
                     	</div>
                     </div>
                 </div>
@@ -366,21 +359,20 @@
     	</div>
     </section>
 
-    <!--  -->
+    <!-- Banners -->
     <section class="banners stretch mt-2">
     	<div class="container">
             <div class="row">
 
-                <!--  -->
+                <!-- Banner -->
                 <div class="col-lg-6 col-md-6 col-12 banner-lg">
-                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-4.jpg">
+                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour1.jpg">
                     <div class="intro">
                         <div class="title">
-                            <h3><i>Trending</i></h3>
+                            <h3>Tour</h3>
                         </div>
                         <div class="content">
-                            <h4>Camping & Hiking</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br>Donec odio. Quisque volutpat mattis eros.</p>
+                            <h4>New Zealand</h4>
                         </div>
                         <div class="action">
                             <a href="#">Discover Now</a>
@@ -388,69 +380,69 @@
                     </div>
                 </div>
 
-                <!--  -->
+                <!-- Banners -->
                 <div class="col-lg-6 col-md-6 col-12 banner-sm-div">
 
-                    <!--  -->
+                    <!-- Banner -->
                     <div class="col-lg-6 col-md-6 col-sm-6 banner-sm font-black">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-5.jpg">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour2.jpg">
                         <div class="intro">
                             <div class="title">
-                                <h3>Women's</h3>
+                                <h3>Tour</h3>
                             </div>
                             <div class="content">
-                                <h4>Active &<br> Fitness</h4>
+                                <h4>China</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Shop Now</a>
+                                <a href="#">Discover Now</a>
                             </div>
                         </div>
                     </div>
 
-                    <!--  -->
+                    <!-- Banner -->
                     <div class="col-lg-6 col-md-6 col-sm-6 banner-sm font-white">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-6.jpg">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour3.jpg">
                         <div class="intro">
                             <div class="title">
-                                <h3>New Arrivals</h3>
+                                <h3>Tour</h3>
                             </div>
                             <div class="content">
-                                <h4>Deepest discount<br> of the season</h4>
+                                <h4>Namibia</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Shop Now</a>
+                                <a href="#">Discover Now</a>
                             </div>
                         </div>
                     </div>
 
-                    <!--  -->
+                    <!-- Banner -->
                     <div class="col-lg-6 col-md-6 col-sm-6 banner-sm font-white">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-7.jpg">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour4.jpg">
                         <div class="intro">
                             <div class="title">
-                                <h3>men's</h3>
+                                <h3>Tour</h3>
                             </div>
                             <div class="content">
-                                <h4>Surf Gear &<br>Accessories</h4>
+                                <h4>Ladakh</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Shop Now</a>
+                                <a href="#">Discover Now</a>
                             </div>
                         </div>
                     </div>
 
-                    <!--  -->
+                    <!-- Banner -->
                     <div class="col-lg-6 col-md-6 col-sm-6 banner-sm font-black">
-                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/banners/banner-8.jpg">
+                        <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour5.jpg">
                         <div class="intro">
                             <div class="title">
-                                <h3>men's</h3>
+                                <h3>Tour</h3>
                             </div>
                             <div class="content">
-                                <h4>outerwear<br>collection</h4>
+                                <h4>Patagonia</h4>
                             </div>
                             <div class="action">
-                                <a href="#">Shop Now</a>
+                                <a href="#">Discover Now</a>
                             </div>
                         </div>
                     </div>
@@ -459,25 +451,25 @@
         </div>
     </section>
 
-    <!--  -->
+    <!-- Featured Products -->
     <section class="featured-products">
     	<div class="container">
     		<div class="heading">
-        		<p class="heading-cat">Featured Products </p>
+        		<p class="heading-cat">Featured Products</p>
         		<h3 class="heading-title">Featured Products</h3>
         	</div>
         	<div class="row">
 
-                <!--  -->
+                <!-- Products -->
         		<div class="col-lg-7 col-md-7 products">
 
-                    <!--  -->
+                    <!-- Article -->
         			<div class="col-6">
         				<div class="product product-10 text-center">
                             <figure class="product-media">
                                 <a href="#">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-1-1.jpg" alt="Product image" class="product-image">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-1-2.jpg" alt="Product image" class="product-image-hover">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article7.1.jpg" alt="Coolpix P1000" class="product-image">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article7.2.jpg" alt="Coolpix P1000" class="product-image-hover">
                                 </a>
                             </figure>
                             <div class="product-body">
@@ -487,10 +479,10 @@
                                 </div>
                             	<div class="product-intro">
                                     <h3 class="product-title">
-                                    	<a href="#">UA Spawn Low</a>
+                                    	<a href="#">Coolpix P1000</a>
                                     </h3>
                                     <div class="product-price">
-                                        $77.99
+                                        $999.95
                                     </div>
                             	</div>
                             	<div class="product-detail">
@@ -500,23 +492,19 @@
 		                                </div>
 		                                <span class="ratings-text">( 3 Reviews )</span>
 		                            </div>
-                                    <div class="product-nav product-nav-dots">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div>
                             	</div>
                             </div>
                         </div>
         			</div>
 
-                    <!--  -->
+                    <!-- Article -->
             		<div class="col-6">
 						<div class="product product-10 text-center">
                             <figure class="product-media">
                             	<span class="product-label label-sale">sale</span>
                                 <a href="#">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-2-1.jpg" alt="Product image" class="product-image">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-2-2.jpg" alt="Product image" class="product-image-hover">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article8.1.jpg" alt="Tripod HG-100TBR" class="product-image">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article8.2.jpg" alt="Tripod HG-100TBR" class="product-image-hover">
                                 </a>
                             </figure>
                             <div class="product-body">
@@ -526,11 +514,11 @@
                                 </div>
                             	<div class="product-intro">
                                     <h3 class="product-title">
-                                    	<a href="#">The North Face Fanorak 2.0</a>
+                                    	<a href="#">Tripod HG-100TBR</a>
                                     </h3>
                                     <div class="product-price">
-                                    	<span class="new-price">$76.99</span>
-                                    	<span class="old-price">Was $109.99</span>
+                                    	<span class="new-price">$119.99</span>
+                                    	<span class="old-price">Was $149.99</span>
                                     </div>
                             	</div>
                             	<div class="product-detail">
@@ -540,23 +528,19 @@
 		                                </div>
 		                                <span class="ratings-text">( 1 Reviews )</span>
 		                            </div>
-                                    <div class="product-nav product-nav-dots" style="visibility: hidden;">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div>
                             	</div>
                             </div>
                         </div>
                     </div>
 
-                    <!--  -->
+                    <!-- Article -->
                     <div class="col-6">
                         <div class="product product-10 text-center">
                             <figure class="product-media">
                             	<span class="product-label label-sale">sale</span>
                                 <a href="#">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-3-1.jpg" alt="Product image" class="product-image">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-3-2.jpg" alt="Product image" class="product-image-hover">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article9.1.jpg" alt="Monarch Fieldscope 60ED" class="product-image">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article9.2.jpg" alt="Monarch Fieldscope 60ED" class="product-image-hover">
                                 </a>
                             </figure>
                             <div class="product-body">
@@ -566,11 +550,11 @@
                                 </div>
                             	<div class="product-intro">
                                     <h3 class="product-title">
-                                    	<a href="#">Osprey Talia</a>
+                                    	<a href="#">Monarch Fieldscope 60ED</a>
                                     </h3>
                                     <div class="product-price">
-                                    	<span class="new-price">$67.50</span>
-                                    	<span class="old-price">Was $150.00</span>
+                                    	<span class="new-price">$1,399.95</span>
+                                    	<span class="old-price">Was $1,499.99</span>
                                     </div>
                             	</div>
                             	<div class="product-detail">
@@ -580,22 +564,18 @@
 		                                </div>
 		                                <span class="ratings-text">( 6 Reviews )</span>
 		                            </div>
-                                    <div class="product-nav product-nav-dots" style="visibility: hidden;">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div>
                             	</div>
                             </div>
                         </div>
                     </div>
 
-                    <!--  -->
+                    <!-- Article -->
                     <div class="col-6">
                         <div class="product product-10 text-center">
                             <figure class="product-media">
                                 <a href="#">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-4-1.jpg" alt="Product image" class="product-image">
-                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-4-2.jpg" alt="Product image" class="product-image-hover">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article10.1.jpg" alt="ME20F-SH" class="product-image">
+                                    <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article10.2.jpg" alt="ME20F-SH" class="product-image-hover">
                                 </a>
                             </figure>
                             <div class="product-body">
@@ -605,10 +585,10 @@
                                 </div>
                             	<div class="product-intro">
                                     <h3 class="product-title">
-                                    	<a href="#">Ignite Limitless Leather</a>
+                                    	<a href="#">ME20F-SH</a>
                                     </h3>
                                     <div class="product-price">
-                                        $52.66
+                                        $679.95
                                     </div>
                             	</div>
                             	<div class="product-detail">
@@ -618,23 +598,19 @@
 		                                </div>
 		                                <span class="ratings-text">( 6 Reviews )</span>
 		                            </div>
-                                    <div class="product-nav product-nav-dots" style="visibility: hidden;">
-                                        <a href="#" class="active" style="background: #34529d;"><span class="sr-only">Color name</span></a>
-                                        <a href="#" style="background: #333333;"><span class="sr-only">Color name</span></a>
-                                    </div>
                             	</div>
                             </div>
                         </div>
                     </div>
         		</div>
 
-                <!--  -->
+                <!-- Deal of the day -->
         		<div class="col-lg-5 col-md-5 col-sm-8 col-12">
         			<div class="product product-10 product-lg text-center">
                         <figure class="product-media">
                         	<span class="product-label label-deal">deal of the day</span>
                             <a href="#">
-                                <img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/featured-products/product-5.jpg" alt="Product image" class="product-image">
+                                <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/article11.jpg" alt="CB-BP10" class="product-image">
                             </a>
                         </figure>
                         <div class="deal">
@@ -643,7 +619,7 @@
                         <div class="product-body">
                         	<div class="product-intro">
                                 <h3 class="product-title">
-                                	<a href="#">Troy Lee Designs A1 MIPS Bike Helmet</a>
+                                	<a href="#">CB-BP10</a>
                                 </h3>
                                 <div class="product-price">
                                     $139.00
@@ -672,18 +648,18 @@
         </div>
     </section>
 
-    <!--  -->
+    <!-- Video -->
     <section class="video-banner">
-    	<img src="<?php echo bloginfo('template_directory');?>/assets/images/demos/demo-24/video-banner/banner.jpg">
+    	<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/background-video.jpg">
     	<div class="intro video">
     		<div class="title">
-    			<h3><i>Spring / Summer</i></h3>
+    			<h3><i>Travel Destinations</i></h3>
     		</div>
     		<div class="content">
-    			<h4>New & Stylish<br>Collection 2019</h4>
+    			<h4>Best of the<br>World 2023</h4>
     		</div>
     		<div class="action">
-    			<a href="https://www.youtube.com/watch?v=YbJOTdZBX1g" class="btn-iframe"><i class="icon-play"></i></a>
+    			<a href="https://cdn.jwplayer.com/videos/2mqf8zwh-6nrQoCp5.mp4" class="btn-iframe"><i class="icon-play"></i></a>
     		</div>
     	</div>
     </section>

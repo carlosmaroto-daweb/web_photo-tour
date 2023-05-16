@@ -108,7 +108,7 @@
                                         </h4>
                                         <span class="cart-product-info">
                                             <span class="cart-product-qty">1</span>
-                                            x $6860,00
+                                            x $6,860.00
                                         </span>
                                     </div>
                                     <figure class="product-image-container">
@@ -125,7 +125,7 @@
                                         </h4>
                                         <span class="cart-product-info">
                                             <span class="cart-product-qty">1</span>
-                                            x $3390,00
+                                            x $3,390.00
                                         </span>
                                     </div>
                                     <figure class="product-image-container">
@@ -138,7 +138,7 @@
                             </div>
                             <div class="dropdown-cart-total">
                                 <span>Total</span>
-                                <span class="cart-total-price">$10250,00</span>
+                                <span class="cart-total-price">$10,250.00</span>
                             </div>
                             <div class="dropdown-cart-action">
                                 <a href="#" class="btn btn-outline-primary-2"><span>View Cart</span><i class="icon-long-arrow-right"></i></a>

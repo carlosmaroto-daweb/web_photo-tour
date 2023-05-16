@@ -165,6 +165,15 @@ a:hover .badge {
     padding-top: 0px;
 }
 
+.deal {
+    margin-top: 12rem;
+    margin-bottom: 0px;
+}
+
+.font-black .title h3, .font-black .content h4 {
+    color: white !important;
+}
+
 /*****************************************  SINGLES *****************************************/
 
 .related-posts .entry-title {
