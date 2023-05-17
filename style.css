@@ -51,6 +51,10 @@ Domain Path: /languages
     color: var(--main-color) !important;
 }
 
+.active a {
+    color: var(--main-color) !important;
+}
+
 .link-button a {
     font-family: 'Poppins';
     text-transform: uppercase;

@@ -1,3 +1,14 @@
+<?php
+    $template = get_page_template();
+    if (strpos($template, 'reviews') > 0){
+        $reviews = true;
+    } else if (strpos($template, 'archives') > 0){
+        $archives = true;
+    } else {
+        $blog = true;
+    }
+?>
+
 <div class="page-wrapper">
     <header class="header header-intro-clearance header-3 no-padding-lr dark-background">
 
@@ -172,13 +183,13 @@
                             <li>
                                 <a href="#" class="black-text">Shop</a>
                             </li>
-                            <li>
+                            <li class="<?php if($reviews) echo 'active';?>">
                                 <a href="<?php echo get_page_link(get_page_object('Reviews')->ID);?>" class="black-text">Reviews</a>
                             </li>
-                            <li>
+                            <li class="<?php if($blog) echo 'active';?>">
                                 <a href="<?php echo get_page_link(get_page_object('Blog')->ID);?>" class="black-text">Blog</a>
                             </li>
-                            <li>
+                            <li class="<?php if($archives) echo 'active';?>">
                                 <a href="<?php echo get_page_link(get_page_object('Archives')->ID);?>" class="black-text">Archives</a>
                             </li>
                         </ul>

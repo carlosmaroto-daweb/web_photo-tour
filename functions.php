@@ -2,6 +2,7 @@
     /* ································································································ THEME SUPPORT ·············*/
 
     add_theme_support('post-thumbnails');
+    add_theme_support('post-formats', array('video', 'audio'));
 
     /*
      *  Enable Frontend Dashicons
