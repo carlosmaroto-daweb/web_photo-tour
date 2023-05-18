@@ -352,7 +352,7 @@
     function get_list_tag($limit) {
         $args = array(
             'number'   => $limit,   // Como máximo se visualiza $limit tags
-            'order_by' => 'count',  // Ordena según el número de post de cada tag
+            'orderby' => 'count',  // Ordena según el número de post de cada tag
             'order'    => 'DESC',   // De más posts a menos posts
         );
         $tags = get_tags($args); // Devuelve una colección de objetos tipo tags con todos los tags del BLOG
