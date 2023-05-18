@@ -28,4 +28,4 @@
             wp_head();
         ?>
     </head>
-<body>
+<body> 

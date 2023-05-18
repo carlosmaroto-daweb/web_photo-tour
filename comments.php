@@ -15,4 +15,4 @@
 <!-- List Comments -->
 <ul class="list-comments">
     <?php wp_list_comments();?>
-</ul>
+</ul> 

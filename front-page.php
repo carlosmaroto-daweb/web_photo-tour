@@ -735,7 +735,7 @@
                             <article class="entry">
                                 <figure class="entry-media">
                                     <a href="<?php the_permalink();?>">
-                                        <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                        <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                     </a>
                                 </figure>
                                 <div class="entry-body text-center">

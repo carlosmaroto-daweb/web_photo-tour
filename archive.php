@@ -32,7 +32,6 @@
             // Restablecer el puntero del resultset a la posición inicial
             rewind_posts();
         }
-        // FALTAN CONTEMPLAR LAS CATEGORIAS Y LOS TAGS PROPIOS DE LOS CPT
 	}
 ?>
 
@@ -106,7 +105,7 @@
                 									<div class="product">
                 										<figure class="product-media">
                 											<a href="<?php the_permalink();?>">
-                												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                 											</a>
                 										</figure>
                 										<h3 class="product-title">

@@ -49,7 +49,7 @@
                 <div class="newsletter">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 banner-overlay-div img-resp"  style="background-image: url('<?php echo $PostImg;?>')">
+                            <div class="col-sm-6 banner-overlay-div img-resp"  style="background-image: url('<?php echo $PostImg;?>')">
                                 <div class="banner-content banner-content-center">
                                     <h4 class="banner-subtitle text-white"><?php echo my_tags_comma($post_destacado_ID);?></h4>
                                     <h3 class="banner-title text-white">
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 d-flex align-items-stretch subscribe-div no-padding-lr">
+                            <div class="col-sm-6 d-flex align-items-stretch subscribe-div no-padding-lr">
                                 <div class="cta cta-box">
                                     <div class="cta-content">
                                         <h3 class="cta-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
@@ -122,7 +122,7 @@
                                 <article class="entry">
                                     <figure class="entry-media">
                                         <a href="<?php the_permalink();?>">
-                                            <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                            <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                         </a>
                                     </figure>
                                     <div class="entry-body">
@@ -146,7 +146,7 @@
                                         </div>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
-                                            <div class="link-button mt-2">
+                                            <div class="link-button mt-4">
                                                 <a href="<?php the_permalink();?>">Continue Reading</a>
                                             </div>
                                         </div>

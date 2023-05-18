@@ -44,9 +44,15 @@
                                     <?php
                                         $args = array(
                                             'type'  => 'postbypost', // Devuelve los títulos de los post en lugar de las fechas
-                                            'limit' => 15,           // Limita la salida a 15 post
+                                            'limit' => 10,           // Limita la salida a 10 post
+                                            'echo'  => false,        // No visualiza el listado de post, sino que nos lo devuelve para ser almacenado en una variable
                                         );
-                                        wp_get_archives($args);
+                                        $last_entries = wp_get_archives($args);
+                                        if(empty($last_entries)) {
+                                            echo "No post published yet...";
+                                        } else {
+                                            echo $last_entries;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -65,11 +71,17 @@
                                 <ul class="list-post last-reviews">
                                     <?php
                                         $args = array(
-                                            'type'      => 'postbypost',   // Devuelve los títulos de los post en lugar de las fechas
-                                            'limit'     => 15,             // Limita la salida a 15 post
-                                            'post_type' => 'mpm_reviews',  // Solo queremos el custom-post-type
+                                            'type'      => 'postbypost',  // Devuelve los títulos de los post en lugar de las fechas
+                                            'limit'     => 10,            // Limita la salida a 10 post
+                                            'post_type' => 'mpm_reviews', // Solo queremos el custom-post-type
+                                            'echo'      => false,         // No visualiza el listado de post, sino que nos lo devuelve para ser almacenado en una variable
                                         );
-                                        wp_get_archives($args);
+                                        $last_reviews = wp_get_archives($args);
+                                        if(empty($last_reviews)) {
+                                            echo "No post published yet...";
+                                        } else {
+                                            echo $last_reviews;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -87,9 +99,13 @@
                             <div class="entry-meta">
                                 <ul class="list-post-count categories">
                                     <?php
-                                        $my_categories = wp_list_categories('title_li=&show_count=1&echo=0&orderby=count&order=DESC&number=15');
-                                        $my_categories =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_categories);
-                                        echo $my_categories;
+                                        $my_categories = wp_list_categories('title_li=&show_count=1&echo=0&orderby=count&order=DESC&number=10');
+                                        if(empty($my_categories)) {
+                                            echo "No categories published yet...";
+                                        } else {
+                                            $my_categories =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_categories);
+                                            echo $my_categories;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -107,7 +123,7 @@
                             <div class="entry-meta">
                                 <ul class="list-post-count tags">
                                     <?php
-                                        get_list_tag(15);
+                                        get_list_tag(10);
                                     ?>
                                 </ul>
                             </div>
@@ -131,7 +147,7 @@
                                             'optioncount' => true,          // Visualiza el número de posts publicados por el autor
                                             'orderby'     => 'post_count',  // Ordena según el número de post publicados
                                             'order'       => 'DESC',        // Ordena de mayor a menor
-                                            'number'      => 15,            // Limita la salida a 15 autores
+                                            'number'      => 10,            // Limita la salida a 10 autores
                                         );
                                         $my_authors = wp_list_authors($args);
                                         $my_authors =  preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $my_authors);
@@ -162,7 +178,7 @@
                                         <ul class="list-post last-entries">
                                             <?php
                                                 $args = array(
-                                                    'post_per_page' => 15,           // Mostramos como máximo 15
+                                                    'post_per_page' => 10,           // Mostramos como máximo 10
                                                     'author'        => $author->ID,  // Post que ha escrito ese autor
                                                 );
                                                 $posts_by_author = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
@@ -196,13 +212,17 @@
                                         $args = array(
                                             'type'            => 'daily',   // Fechas por dias
                                             'show_post_count' => true,      // Número de posts publicados ese día
-                                            'limit'           => 15,        // Máximo 15 fechas
-                                            'echo'            => false,
+                                            'limit'           => 10,        // Máximo 10 fechas
+                                            'echo'            => false,     // No visualiza el listado de post, sino que nos lo devuelve para ser almacenado en una variable
                                         );
                                         $daily = wp_get_archives($args);
-                                        $spaces = wp_spaces_regexp();
-                                        $daily =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $daily);
-                                        echo $daily;
+                                        if(empty($daily)) {
+                                            echo "No posts published yet...";
+                                        } else {
+                                            $spaces = wp_spaces_regexp();
+                                            $daily =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $daily);
+                                            echo $daily;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -223,13 +243,17 @@
                                         $args = array(
                                             'type'            => 'monthly',   // Fechas por mes
                                             'show_post_count' => true,        // Número de posts publicados ese mes
-                                            'limit'           => 15,          // Máximo 15 fechas
-                                            'echo'            => false,
+                                            'limit'           => 10,          // Máximo 10 fechas
+                                            'echo'            => false,       // No visualiza el listado de post, sino que nos lo devuelve para ser almacenado en una variable
                                         );
                                         $monthly = wp_get_archives($args);
-                                        $spaces = wp_spaces_regexp();
-                                        $monthly =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $monthly);
-                                        echo $monthly;
+                                        if(empty($monthly)) {
+                                            echo "No posts published yet...";
+                                        } else {
+                                            $spaces = wp_spaces_regexp();
+                                            $monthly =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $monthly);
+                                            echo $monthly;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -250,13 +274,17 @@
                                         $args = array(
                                             'type'            => 'yearly',   // Fechas por año
                                             'show_post_count' => true,       // Número de posts publicados ese año
-                                            'limit'           => 15,         // Máximo 15 fechas
-                                            'echo'            => false,
+                                            'limit'           => 10,         // Máximo 10 fechas
+                                            'echo'            => false,      // No visualiza el listado de post, sino que nos lo devuelve para ser almacenado en una variable
                                         );
                                         $yearly = wp_get_archives($args);
-                                        $spaces = wp_spaces_regexp();
-                                        $yearly =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $yearly);
-                                        echo $yearly;
+                                        if(empty($yearly)) {
+                                            echo "No posts published yet...";
+                                        } else {
+                                            $spaces = wp_spaces_regexp();
+                                            $yearly =  preg_replace('/<\/a>'.$spaces.'\(([0-9]+)\)/', ' <span class="badge badge-pasific pull-right">\\1</span></a>', $yearly);
+                                            echo $yearly;
+                                        }
                                     ?>
                                 </ul>
                             </div>
@@ -275,7 +303,7 @@
                                 <ul class="list-post-count commented">
                                     <?php
                                         $args = array (
-                                            'post_per_page'  => 15,               // Limite de 15 post
+                                            'post_per_page'  => 10,               // Limite de 10 post
                                             'orderby'        => 'comment_count',  // Ordenados según el número de post
                                             'order'          => 'DESC'            // Ordenados de más a menos
                                         );
@@ -307,7 +335,7 @@
                                 <ul class="list-post-count popular">
                                     <?php
                                         $args = array(
-                                            'post_per_page' => 15,                // Mostramos como máximo 15
+                                            'post_per_page' => 10,                // Mostramos como máximo 10
                                             'meta_key'      => 'numvisits',       // Meta campo que vamos a usar como criterio de búsqueda
                                             'orderby'       => 'meta_value_num',  // Ordenamos por el valor númerico que tenga ese campo
                                             'order'         => 'DESC',            // De más visitas a menos visitas

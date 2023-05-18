@@ -6,7 +6,7 @@
 
 					<!-- Icon Box -->
 					<div class="col-sm-6 col-lg-3">
-	                    <div class="icon-box icon-box-side">
+	                    <div class="icon-box icon-box-side display-center">
 	                        <span class="icon-box-icon">
 								<i class="bi bi-hourglass-split"></i>
 	                        </span>
@@ -19,7 +19,7 @@
 	                
 					<!-- Icon Box -->
 	                <div class="col-sm-6 col-lg-3">
-	                    <div class="icon-box icon-box-side">
+	                    <div class="icon-box icon-box-side display-center">
 	                        <span class="icon-box-icon">
 								<i class="bi bi-camera"></i>
 	                        </span>
@@ -32,7 +32,7 @@
 	                
 					<!-- Icon Box -->
 	                <div class="col-sm-6 col-lg-3">
-	                    <div class="icon-box icon-box-side">
+	                    <div class="icon-box icon-box-side display-center">
 	                        <span class="icon-box-icon">
 								<i class="bi bi-people"></i>
 	                        </span>
@@ -45,7 +45,7 @@
 	                
 					<!-- Icon Box -->
 	                <div class="col-sm-6 col-lg-3">
-	                    <div class="icon-box icon-box-side">
+	                    <div class="icon-box icon-box-side display-center">
 	                        <span class="icon-box-icon">
 								<i class="bi bi-emoji-laughing"></i>
 	                        </span>
@@ -64,7 +64,7 @@
             		<div class="row">
 	                
 						<!-- Description Web and Social Networks -->
-	            		<div class="col-lg-3 col-md-12">
+	            		<div class="col-lg-3 col-md-12 display-center">
 		                    <div class="widget widget-about">
                             	<img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/logo.png" class="footer-logo" alt="PhotoTour Logo">
 		                        <p>Workshops Photo Tours by Dream Photo Expeditions. All our Photography Tours and Workshops are organized by our own official Travel Agency.</p>
@@ -79,7 +79,7 @@
 		                </div>
 	                
 						<!-- Account Link -->
-						<div class="col-lg-3 col-sm-4 col-md-4">
+						<div class="col-lg-3 col-sm-4 col-md-4 display-center">
 							<div class="widget">
 								<h4 class="widget-title">My Account</h4>
 								<ul class="widget-list">
@@ -93,25 +93,27 @@
 						</div>
 	                
 						<!-- Contact and Legal Link -->
-		                <div class="col-lg-3 col-sm-4 col-md-4">
-		                    <div class="widget">
-		                        <h4 class="widget-title">Contact</h4>
-		                        <ul class="widget-list">
-		                            <li><a href="tel:#"><i class="bi bi-telephone"></i> Call: +34 625 01 44 81</a></li>
-		                            <li><a href="mailto:#"><i class="bi bi-envelope"></i> info@phototour.com</a></li>
-		                        </ul>
-		                    </div>
-		                    <div class="widget">
-		                        <h4 class="widget-title">Legal</h4>
-		                        <ul class="widget-list">
-		                            <li><a href="#">Terms</a></li>
-		                            <li><a href="<?php echo get_page_link(get_page_object('Privacy Policy')->ID)?>">Privacy</a></li>
-		                        </ul>
-		                    </div>
+		                <div class="col-lg-3 col-sm-4 col-md-4 display-center">
+							<div>
+								<div class="widget">
+									<h4 class="widget-title">Contact</h4>
+									<ul class="widget-list">
+										<li><a href="tel:#"><i class="bi bi-telephone"></i> Call: +34 625 01 44 81</a></li>
+										<li><a href="mailto:#"><i class="bi bi-envelope"></i> info@phototour.com</a></li>
+									</ul>
+								</div>
+								<div class="widget">
+									<h4 class="widget-title">Legal</h4>
+									<ul class="widget-list">
+										<li><a href="#">Terms</a></li>
+										<li><a href="<?php echo get_page_link(get_page_object('Privacy Policy')->ID)?>">Privacy</a></li>
+									</ul>
+								</div>
+							</div>
 		                </div>
 	                
 						<!-- Menu Link -->
-						<div class="col-lg-3 col-sm-4 col-md-4">
+						<div class="col-lg-3 col-sm-4 col-md-4 display-center">
 							<div class="widget">
 								<h4 class="widget-title">Explore</h4>
 								<ul class="widget-list">

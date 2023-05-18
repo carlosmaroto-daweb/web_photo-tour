@@ -353,11 +353,15 @@
         $args = array(
             'number'   => $limit,   // Como máximo se visualiza $limit tags
             'order_by' => 'count',  // Ordena según el número de post de cada tag
-            'order'    => 'DESC'    // De más posts a menos posts
+            'order'    => 'DESC',   // De más posts a menos posts
         );
         $tags = get_tags($args); // Devuelve una colección de objetos tipo tags con todos los tags del BLOG
-        foreach($tags as $tag) {
-            echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'<span class="badge pull-right">'.$tag->count.'</span></a></li>';
+        if(empty($tags)) {
+            echo "No tags published yet...";
+        } else {
+            foreach($tags as $tag) {
+                echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'<span class="badge pull-right">'.$tag->count.'</span></a></li>';
+            }
         }
     }
     

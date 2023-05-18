@@ -74,7 +74,7 @@
                         ?>
                         <div class="entry-author-details">
                             <figure class="author-media">
-                                <img src="<?php echo $avatar;?>" alt="Image User <?php echo get_the_author()?>">
+                                <img src="<?php echo $avatar;?>" alt="<?php echo get_the_author()?>">
                             </figure>
                             <div class="author-body">
                                 <div class="author-header row no-gutters flex-column flex-md-row">
@@ -135,7 +135,7 @@
                                         <article class="entry entry-grid">
                                             <figure class="entry-media">
                                                 <a href="<?php the_permalink();?>">
-                                                    <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                                    <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                                 </a>
                                             </figure>
                                             <div class="entry-body">

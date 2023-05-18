@@ -30,14 +30,14 @@
     </nav>
 
     <!-- Page Content  -->
-    <div class="page-content pb-3">
+    <div class="page-content">
         <div class="container mb-2">
             
             <!-- Author Information -->
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="about-text text-center mt-3">
-                        <h2 class="title text-center mb-2">I am <span class="main-color"><?php echo $curauth->nickname?></span></php></h2>
+                        <h2 class="title text-center mb-4">I am <span class="main-color"><?php echo $curauth->nickname?></span></php></h2>
                         <p><?php echo $curauth->description?></p>
                         <p class="signature"><?php echo $nombre?></p>
                         <img src="
@@ -55,7 +55,7 @@
             
             <!-- Social Network -->
             <div class="row justify-content-center social-network">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <div class="icon-box icon-box-sm text-center">
                         <a href="<?php echo get_user_meta($curauth->ID, 'facebook', true)?>" class="icon-box-link">
                             <span class="icon-box-icon">
@@ -67,7 +67,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <div class="icon-box icon-box-sm text-center">
                         <a href="<?php echo get_user_meta($curauth->ID, 'instagram', true)?>" class="icon-box-link">
                             <span class="icon-box-icon">
@@ -79,7 +79,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-sm-4">
                     <div class="icon-box icon-box-sm text-center">
                         <a href="<?php echo get_user_meta($curauth->ID, 'linknd', true)?>" class="icon-box-link">
                             <span class="icon-box-icon">
@@ -135,7 +135,7 @@
         </div>
 
         <!-- Last entries -->
-        <div class="bg-light-2 pt-6 pb-7">
+        <div class="bg-light-2 pt-6">
             <div class="container">
                 <h2 class="title text-center mb-4">My last entries</h2>
                 <div class="row">
@@ -160,11 +160,11 @@
                                 }
                     ?>
                                 <!-- Article -->
-                                <div class="col-sm-6 col-lg-4">
+                                <div class="col-sm-6 col-lg-4 mb-4">
                                     <div class="member member-2 text-center">
                                         <figure class="member-media">
                                             <a href="<?php the_permalink();?>">
-                                                <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                                <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                             </a>
                                         </figure>
                                         <div class="member-content">

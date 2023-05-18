@@ -1,10 +1,6 @@
 <?php
 	get_header();
 	get_template_part('nav', 'blog');
-	$search_words = get_search_query();
-	if(empty($search_words)) {
-	    $search_words = "All Posts";
-	}
 	if(have_posts()) {
 	    $total = $wp_the_query->found_posts;
 	    if($total==1) {
@@ -14,6 +10,10 @@
 	    }
 	} else {
 	    $results = "No posts found...";
+	}
+	$search_words = get_search_query();
+	if(empty($search_words)) {
+	    $search_words = "All Posts";
 	}
 ?>
 
@@ -87,7 +87,7 @@
                 									<div class="product">
                 										<figure class="product-media">
                 											<a href="<?php the_permalink();?>">
-                												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                 											</a>
                 										</figure>
                 										<h3 class="product-title">
@@ -98,7 +98,7 @@
                 								<td class="price-col"><?php the_time('j, M Y');?></td>
                 								<td class="stock-col"><span class="in-stock"><?php the_author();?></span></td>
                 								<td class="action-col">
-													<?php
+                								    <?php
                 								        if($post->post_type != 'page') {
 															if($post->post_type == 'post'){
 													?>
@@ -138,14 +138,14 @@
                     </div>
 
 					<!-- Page Navigation -->
-                    <?php
+					<?php
 						the_posts_pagination( array(
 							'prev_text'          => __( 'Prev', 'your-theme' ),
 							'next_text'          => __( 'Next', 'your-theme' ),
 							'mid_size'           => 3,
 							'end_size'           => 2,
 						) );
-                    ?>
+					?>
         		</div>
 
                 <!-- Sidebar -->

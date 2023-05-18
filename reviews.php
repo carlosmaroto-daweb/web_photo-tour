@@ -61,7 +61,7 @@
                                 <article class="entry">
                                     <figure class="entry-media">
                                         <a href="<?php the_permalink();?>">
-                                            <img src="<?php echo $PostImg;?>" alt="Image <?php the_title();?>">
+                                            <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                         </a>
                                     </figure>
                                     <div class="entry-body">
@@ -89,7 +89,7 @@
                                         ?>
                                         <div class="entry-content">
                                             <p><?php the_excerpt();?></p>
-                                            <div class="link-button mt-2">
+                                            <div class="link-button mt-4">
                                                 <a href="<?php the_permalink();?>">Continue Reading</a>
                                             </div>
                                         </div>
