@@ -160,27 +160,30 @@
                                 }
                     ?>
                                 <!-- Article -->
-                                <div class="col-sm-6 col-lg-4 mb-4">
-                                    <div class="member member-2 text-center">
-                                        <figure class="member-media">
+                                <div class="author-article col-sm-6 col-lg-4">
+                                    <article class="entry">
+                                        <figure class="entry-media">
                                             <a href="<?php the_permalink();?>">
                                                 <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                             </a>
                                         </figure>
-                                        <div class="member-content">
-                                            <h3 class="member-title mb-1">
-                                                <a href="<?php the_permalink();?>" class="black-text"><?php the_title();?></a>
-                                            </h3>
-                                            <h3 class="member-title">
-                                                In <?php the_category(' & ');?>
-                                            </h3>
+                                        <div class="entry-body text-center">
+                                            <div class="entry-meta">
+                                                <?php the_time('j, M Y');?>
+                                                <span class="meta-separator">|</span>
+                                                <?php comments_number('No comments', 'One comment', '% comments');?>
+                                            </div>
+                                            <h2 class="entry-title">
+                                                <a href="<?php the_permalink();?>"><?php the_title();?></a>
+                                            </h2>
+                                            <div class="entry-cats mb-2">
+                                                <?php the_category(' & ');?>
+                                            </div>
+                                            <div class="link-button mb-2">
+                                                <a href="<?php the_permalink();?>">read more</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="link-button">
-                                            <a href="<?php the_permalink();?>">Read More</a>
-                                        </div>
-                                    </div>
+                                    </article>
                                 </div>
 
                     <!-- Aquí termina el bucle-->

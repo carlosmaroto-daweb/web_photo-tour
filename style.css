@@ -51,6 +51,16 @@ Domain Path: /languages
     justify-content: center;
 }
 
+.mh75 {
+    height: 75vh;
+}
+
+.img-resp {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .active {
     font-weight: 400 !important;
     color: var(--main-color) !important;
@@ -77,7 +87,7 @@ Domain Path: /languages
 }
 
 .link-button:hover a {
-    color: #222;
+    color: #222 !important;
     background-color: var(--main-color);
     text-decoration: none;
 }
@@ -149,14 +159,12 @@ a:hover .badge {
     margin-bottom: 50px;
 }
 
-.img-resp {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
 .banner-content {
     text-shadow: 2px 2px 2px #333;
+}
+
+.banner-subtitle, .banner-title {
+    color: white;
 }
 
 .cta-destacado {
@@ -205,9 +213,29 @@ a:hover .badge {
     color: white !important;
 }
 
+.product-intro .product-title a {
+    color: #222 !important;
+}
+
+.product-intro .product-title a:hover {
+    color: var(--main-color) !important;
+}
+
+.btn-cart:hover{
+    color: #222 !important;
+}
+
+.btn-wishlist {
+    top: 5rem !important;
+}
+
 .video-banner img {
     width: 100%;
     height: 70vh;
+}
+
+.blog .entry-title {
+    margin-bottom: 5px;
 }
 
 /*****************************************  SINGLES *****************************************/
@@ -219,8 +247,8 @@ a:hover .badge {
 .related-posts .entry-title a {
     color: black !important;
     text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .related-posts .entry-title a:hover {
@@ -401,6 +429,10 @@ a:hover .badge {
     margin-bottom: 3rem;
 }
 
+.mobile-menu-container .social-icon:hover {
+    color: var(--main-color);
+}
+
 #scroll-top {
     color: #7777;
     border-radius: 50%;
@@ -537,17 +569,6 @@ a:hover .badge {
     color: #777;
 }
 
-.member-content .black-text {
-    color: black !important;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.member-content .black-text:hover {
-    color: var(--main-color) !important;
-}
-
 .icon-box-link{
     display: inline-block;
     width: 110px;
@@ -571,11 +592,15 @@ a:hover .badge {
     color: white;
 }
 
-/****************************************  PRIVATE *****************************************/
-
-.mh75 {
-    height: 75vh;
+.author-article .entry-cats a {
+    color: var(--main-color);
 }
+
+.author-article .entry-title {
+    margin-bottom: 5px;
+}
+
+/****************************************  PRIVATE *****************************************/
 
 .form-box {
     padding: 3.7rem 6rem 3.7rem;

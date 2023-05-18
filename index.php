@@ -51,8 +51,8 @@
                         <div class="row">
                             <div class="col-sm-6 banner-overlay-div img-resp"  style="background-image: url('<?php echo $PostImg;?>')">
                                 <div class="banner-content banner-content-center">
-                                    <h4 class="banner-subtitle text-white"><?php echo my_tags_comma($post_destacado_ID);?></h4>
-                                    <h3 class="banner-title text-white">
+                                    <h4 class="banner-subtitle"><?php echo my_tags_comma($post_destacado_ID);?></h4>
+                                    <h3 class="banner-title">
                                         <ul class="cta-destacado">
                                             <?php the_category(' & ');?>
                                         </ul>

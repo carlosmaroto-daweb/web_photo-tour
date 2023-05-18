@@ -136,23 +136,26 @@
                                         }
                             ?>
                                         <!-- Article -->
-                                        <article class="entry entry-grid">
+                                        <article class="entry">
                                             <figure class="entry-media">
                                                 <a href="<?php the_permalink();?>">
                                                     <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
                                                 </a>
                                             </figure>
-                                            <div class="entry-body">
+                                            <div class="entry-body text-center">
                                                 <div class="entry-meta">
                                                     <?php the_time('j, M Y');?>
                                                     <span class="meta-separator">|</span>
-                                                    <a href="<?php the_permalink();?>"><?php comments_number('No comments', 'One comment', '% comments');?></a>
+                                                    <?php comments_number('No comments', 'One comment', '% comments');?>
                                                 </div>
                                                 <h2 class="entry-title">
                                                     <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                                 </h2>
-                                                <div class="entry-cats">
+                                                <div class="entry-cats mb-2">
                                                     <?php the_category(' & ');?>
+                                                </div>
+                                                <div class="link-button mb-2">
+                                                    <a href="<?php the_permalink();?>">read more</a>
                                                 </div>
                                             </div>
                                         </article>

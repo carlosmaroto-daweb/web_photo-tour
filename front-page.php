@@ -365,7 +365,7 @@
             <div class="row">
 
                 <!-- Banner -->
-                <div class="col-lg-6 col-md-6 col-12 banner-lg">
+                <div class="col-lg-6 col-12 banner-lg">
                     <img src="<?php echo bloginfo('template_directory');?>/assets/images/phototour/tour1.jpg">
                     <div class="intro">
                         <div class="title">
@@ -381,7 +381,7 @@
                 </div>
 
                 <!-- Banners -->
-                <div class="col-lg-6 col-md-6 col-12 banner-sm-div">
+                <div class="col-lg-6 col-12 banner-sm-div">
 
                     <!-- Banner -->
                     <div class="col-lg-6 col-md-6 col-sm-6 banner-sm font-black">
@@ -740,11 +740,16 @@
                                 </figure>
                                 <div class="entry-body text-center">
                                     <div class="entry-meta">
-                                        <a href="#"><?php the_time('j, M Y');?></a>, <?php comments_number('No comments', 'One comment', '% comments');?>
+                                        <?php the_time('j, M Y');?>
+                                        <span class="meta-separator">|</span>
+                                        <?php comments_number('No comments', 'One comment', '% comments');?>
                                     </div>
-                                    <h3 class="entry-title mb-2">
+                                    <h2 class="entry-title">
                                         <a href="<?php the_permalink();?>"><?php the_title();?></a>
-                                    </h3>
+                                    </h2>
+                                    <div class="entry-cats mb-2">
+                                        <?php the_category(' & ');?>
+                                    </div>
                                     <div class="link-button mb-2">
                                         <a href="<?php the_permalink();?>">read more</a>
                                     </div>
