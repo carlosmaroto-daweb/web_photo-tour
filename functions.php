@@ -94,6 +94,16 @@
         // Indispensable para que las skill del author funcionen correctamente
         wp_register_script('countTo',  get_template_directory_uri().'/assets/js/jquery.countTo.js', array('jQuery'), null, true);
         wp_enqueue_script('countTo');
+ 
+        // Indispensable para que los porcentages del las reviews funcionen correctamente
+        wp_register_script('circle-progress',  get_template_directory_uri().'/assets/js/progress-bar/circle-progress.js', null, null, true);
+        wp_enqueue_script('circle-progress');
+
+        wp_register_script('circle-progress-main',  get_template_directory_uri().'/assets/js/progress-bar/circle-progress-main.js', null, null, true);
+        wp_enqueue_script('circle-progress-main');
+
+        wp_register_script('appear',  get_template_directory_uri().'/assets/js/main/jquery.appear.js', array('jQuery'), null, true);
+        wp_enqueue_script('appear');
     }
     add_action('wp_enqueue_scripts','add_theme_scripts');
     
