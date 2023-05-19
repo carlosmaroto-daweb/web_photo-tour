@@ -191,7 +191,7 @@
     }
     add_filter('excerpt_length', 'my_excerpt_length');
     
-    // CONTADOR DE VISITAS
+    /* ································································································ CONTADOR DE VISITAS ·············*/
     
     /**
      * Retrieve the number of visits of a post
@@ -362,7 +362,7 @@
     function get_list_tag($limit) {
         $args = array(
             'number'   => $limit,   // Como máximo se visualiza $limit tags
-            'orderby' => 'count',  // Ordena según el número de post de cada tag
+            'orderby'  => 'count',  // Ordena según el número de post de cada tag
             'order'    => 'DESC',   // De más posts a menos posts
         );
         $tags = get_tags($args); // Devuelve una colección de objetos tipo tags con todos los tags del BLOG

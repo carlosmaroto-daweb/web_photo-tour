@@ -77,8 +77,6 @@
     <!-- Aquí termina el bucle-->
     <?php
             endwhile;
-        else:
-            echo 'No posts published yet...';
         endif;
         
         wp_reset_query();
