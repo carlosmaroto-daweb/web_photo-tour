@@ -178,8 +178,8 @@
                                         <ul class="list-post last-entries">
                                             <?php
                                                 $args = array(
-                                                    'post_per_page' => 10,           // Mostramos como máximo 10
-                                                    'author'        => $author->ID,  // Post que ha escrito ese autor
+                                                    'posts_per_page' => 10,           // Mostramos como máximo 10
+                                                    'author'         => $author->ID,  // Post que ha escrito ese autor
                                                 );
                                                 $posts_by_author = get_posts($args); // Almacenamos los objetos tipo post que ha escrito ese autor
                                                 if(empty($posts_by_author)) {
@@ -303,9 +303,9 @@
                                 <ul class="list-post-count commented">
                                     <?php
                                         $args = array (
-                                            'post_per_page'  => 10,               // Limite de 10 post
-                                            'orderby'        => 'comment_count',  // Ordenados según el número de post
-                                            'order'          => 'DESC'            // Ordenados de más a menos
+                                            'posts_per_page'  => 10,               // Limite de 10 post
+                                            'orderby'         => 'comment_count',  // Ordenados según el número de post
+                                            'order'           => 'DESC'            // Ordenados de más a menos
                                         );
                                         $most_commented = new WP_Query($args);
                                         if($most_commented->have_posts()):
@@ -335,10 +335,10 @@
                                 <ul class="list-post-count popular">
                                     <?php
                                         $args = array(
-                                            'post_per_page' => 10,                // Mostramos como máximo 10
-                                            'meta_key'      => 'numvisits',       // Meta campo que vamos a usar como criterio de búsqueda
-                                            'orderby'       => 'meta_value_num',  // Ordenamos por el valor númerico que tenga ese campo
-                                            'order'         => 'DESC',            // De más visitas a menos visitas
+                                            'posts_per_page' => 10,                // Mostramos como máximo 10
+                                            'meta_key'       => 'numvisits',       // Meta campo que vamos a usar como criterio de búsqueda
+                                            'orderby'        => 'meta_value_num',  // Ordenamos por el valor númerico que tenga ese campo
+                                            'order'          => 'DESC',            // De más visitas a menos visitas
                                         );
                                         $popular = get_posts($args);
                                         if(empty($popular)) {
