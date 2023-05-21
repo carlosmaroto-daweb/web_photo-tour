@@ -52,8 +52,8 @@
                             <h2 class="entry-title entry-title-big">
                                 <?php the_title();?>
                             </h2>
-                            <div class="entry-cats">
-                                in <?php the_category();?>
+                            <div class="entry-cats mb-3">
+                                in <?php the_category(' & ');?>
                             </div>
                             <?php
                                 // Aqui tiene que mostrar los custom fields el shortcode
@@ -118,9 +118,10 @@
                             <!-- Aquí comienza el bucle-->
                             <?php
                                 $args = array(
-                                    'posts_per_page' => 5,                // Queremos 5 post por página
-                                    'category__in'   => $cats,            // Incluimos los posts que compartan categoria con el post que estamos viendo
-                                    'post__not_in'   => array($post_id),  // Excluimos el post que estamos viendo
+                                    'post_type'      => array('mpm_reviews'),   // Queremos solo los custom-post-type
+                                    'posts_per_page' => 5,                      // Queremos 5 post por página
+                                    'category__in'   => $cats,                  // Incluimos los posts que compartan categoria con el post que estamos viendo
+                                    'post__not_in'   => array($post_id),        // Excluimos el post que estamos viendo
                                 );
                                 $latest_posts = new WP_Query($args);
                                 

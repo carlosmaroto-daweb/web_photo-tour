@@ -53,7 +53,7 @@
                                 <?php the_title();?>
                             </h2>
                             <div class="entry-cats">
-                                in <?php the_category();?>
+                                in <?php the_category(' & ');?>
                             </div>
                             <div class="entry-content editor-content">
                                 <p><?php the_content();?></p>

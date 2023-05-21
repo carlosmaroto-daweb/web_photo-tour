@@ -80,7 +80,7 @@
                                         <h2 class="entry-title">
                                             <a href="<?php the_permalink();?>"><?php the_title();?></a>
                                         </h2>
-                                        <div class="entry-cats">
+                                        <div class="entry-cats mb-3">
                                             in <?php the_category(' & ');?>
                                         </div>
                                         <?php
