@@ -1,5 +1,8 @@
 <?php
-    $template = get_page_template();
+    $template = get_page_template();  // Solo sirve para los template de la jerarquía de wordpress
+    if (empty($template)) {           // Si el resultado de la función es nulo cojo el template de la variable global
+        global $template;
+    }
     if (strpos($template, 'reviews') > 0){
         $reviews = true;
     } else if (strpos($template, 'archives') > 0){

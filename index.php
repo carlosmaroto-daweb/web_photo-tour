@@ -1,6 +1,7 @@
 <?php
 	get_header();
 	get_template_part('nav', 'blog');
+	global $PostImg;
 ?>
 
 <main class="main">
@@ -28,6 +29,20 @@
         $args = array(
             'posts_per_page' => 1,
             'post_type'      => array('post'),
+            // Excluimos los post format (audio y video) del bucle
+            // Para ello hay que acceder a la taxonomía de WP
+            // Y crear una consulta con tax_query
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'post_format',  // Especificamos el concepto de búsqueda
+                    'field'    => 'slug',         // El campo del filtro será el slug
+                    'terms'    => array(
+                        'post-format-video',
+                        'post-format-audio',
+                    ),
+                    'operator' => 'NOT IN',
+                ),
+            ),
         );
         $post_destacado = new WP_Query($args);
         $post_destacado_ID = 0;
@@ -115,44 +130,11 @@
                                 } else {
                                     $PostImg = get_template_directory_uri().'/assets/images/phototour/default.jpg';
                                 }
-                    ?>
-                                <!-- Article -->
-                                <article class="entry">
-                                    <figure class="entry-media">
-                                        <a href="<?php the_permalink();?>">
-                                            <img src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
-                                        </a>
-                                    </figure>
-                                    <div class="entry-body">
-                                        <div class="entry-meta">
-                                            <span class="entry-author">
-                                                by <?php the_author_posts_link();?>
-                                            </span>
-                                            <span class="meta-separator">|</span>
-                                            <?php the_time('j, M Y');?>
-                                            <span class="meta-separator">|</span>
-                                            <?php comments_number('No comments', 'One comment', '% comments');?>
-                                            <span class="meta-separator">|</span>
-                                            <?php echo get_num_visits($post->ID);?>
-                                        </div>
-                                        <br/>
-                                        <h2 class="entry-title">
-                                            <a href="<?php the_permalink();?>"><?php the_title();?></a>
-                                        </h2>
-                                        <div class="entry-cats">
-                                            in <?php the_category(' & ');?>
-                                        </div>
-                                        <div class="entry-content">
-                                            <p><?php the_excerpt();?></p>
-                                            <div class="link-button mt-4">
-                                                <a href="<?php the_permalink();?>">Continue Reading</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
 
-                    <!-- Aquí termina el bucle-->
-                    <?php
+                                // Mostramos el post del formato que sea
+                                get_template_part('content', get_post_format());
+                            
+                            // Aquí termina el bucle
                             endwhile;
                             
                             wp_reset_postdata();

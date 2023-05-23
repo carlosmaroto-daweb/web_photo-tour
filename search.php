@@ -99,28 +99,59 @@
                 								<td class="stock-col"><span class="in-stock"><?php the_author();?></span></td>
                 								<td class="action-col">
                 								    <?php
-                								        if($post->post_type != 'page') {
+													if($post->post_type != 'page') {
+														$formato = get_post_format();
+														if(!empty($formato)) {
+															?>
+															<a href="#post-format-modal-<?php echo $post->ID?>" data-toggle="modal" class="btn btn-block btn-outline-primary-2 post-type-button">
+																<p><?php echo $formato?></p><span class="dashicons <?php
+																	if($formato == 'video') {
+																		echo 'dashicons-video-alt3';
+																	} else if ($formato == 'audio') {
+																		echo 'dashicons-format-audio';
+																	}
+																?>"></span>
+															</a>
+
+															<div class="modal fade" id="post-format-modal-<?php echo $post->ID?>" tabindex="-1" role="dialog" aria-hidden="true">
+																<div class="modal-dialog modal-dialog-centered" role="document">
+																	<div class="modal-content">
+																		<div class="modal-body">
+																			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																				<span aria-hidden="true"><i class="icon-close"></i></span>
+																			</button>
+																			<div class="form-box">
+																				<?php the_content();?>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<?php
+														}
+														else {
 															if($post->post_type == 'post'){
-													?>
-															<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
-																<p>BLOG POST</p><span class="dashicons dashicons-media-document"></span>
-                                                            </a>
-													<?php
+																?>
+																<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
+																	<p>BLOG POST</p><span class="dashicons dashicons-media-document"></span>
+																</a>
+																<?php
 															}
 															else if ($post->post_type == 'mpm_reviews') {
-                								    ?>
+																?>
 																<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
 																	<p>REVIEW POST</p><span class="dashicons dashicons-welcome-write-blog"></span>
 																</a>
-                								    <?php
+																<?php
 															}
-                								        } else {
-                								    ?>
-                        									<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
-                                                                <p>PAGE</p><span class="dashicons dashicons-media-default"></span>
-															</a>
-                								    <?php
-                								        }
+														}
+													} else {
+														?>
+														<a href="<?php the_permalink();?>" class="btn btn-block btn-outline-primary-2 post-type-button">
+															<p>PAGE</p><span class="dashicons dashicons-media-default"></span>
+														</a>
+														<?php
+													}
                 								    ?>
                 								</td>
                 								<td class="remove-col"></td>
