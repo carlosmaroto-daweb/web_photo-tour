@@ -489,6 +489,14 @@ iframe[src*="youtube"] {
 
 .modal-dialog .form-box {
     max-width: 100% !important;
+    padding-top: 50px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 0px !important;
+}
+
+.modal-dialog figure {
+    margin-bottom: 0px !important;
 }
 
 /****************************************  ARCHIVES *****************************************/
