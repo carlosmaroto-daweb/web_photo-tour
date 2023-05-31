@@ -85,14 +85,33 @@
                 							<tr>
                 								<td class="product-col">
                 									<div class="product">
-                										<figure class="product-media">
-                											<a href="<?php the_permalink();?>">
-                												<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
-                											</a>
-                										</figure>
-                										<h3 class="product-title">
-                											<a href="<?php the_permalink();?>"><?php the_title();?></a>
-                										</h3>
+														<?php
+															$formato = get_post_format();
+															if(empty($formato)) {
+														?>
+																<figure class="product-media">
+																	<a href="<?php the_permalink();?>">
+																		<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
+																	</a>
+																</figure>
+																<h3 class="product-title">
+																	<a href="<?php the_permalink();?>"><?php the_title();?></a>
+																</h3>
+														<?php
+															} else {
+														?>
+																<figure class="product-media">
+																	<a href="#post-format-modal-<?php echo $post->ID?>" data-toggle="modal">
+																		<img class="miniatura-search" src="<?php echo $PostImg;?>" alt="<?php the_title();?>">
+																	</a>
+																</figure>
+																<h3 class="product-title">
+																	<a href="#post-format-modal-<?php echo $post->ID?>" data-toggle="modal"><?php the_title();?></a>
+																</h3>
+														<?php
+															}
+														?>
+                										
                 									</div>
                 								</td>
                 								<td class="price-col"><?php the_time('j, M Y');?></td>
@@ -100,7 +119,6 @@
                 								<td class="action-col">
                 								    <?php
 													if($post->post_type != 'page') {
-														$formato = get_post_format();
 														if(!empty($formato)) {
 															?>
 															<a href="#post-format-modal-<?php echo $post->ID?>" data-toggle="modal" class="btn btn-block btn-outline-primary-2 post-type-button">
@@ -112,21 +130,6 @@
 																	}
 																?>"></span>
 															</a>
-
-															<div class="modal fade" id="post-format-modal-<?php echo $post->ID?>" tabindex="-1" role="dialog" aria-hidden="true">
-																<div class="modal-dialog modal-dialog-centered" role="document">
-																	<div class="modal-content">
-																		<div class="modal-body">
-																			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																				<span aria-hidden="true"><i class="icon-close"></i></span>
-																			</button>
-																			<div class="form-box">
-																				<?php the_content();?>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
 															<?php
 														}
 														else {
@@ -156,7 +159,28 @@
                 								</td>
                 								<td class="remove-col"></td>
                 							</tr>
-                							
+											
+											<!-- Modal -->
+											<?php
+												if(!empty($formato)) {
+											?>
+													<div class="modal fade" id="post-format-modal-<?php echo $post->ID?>" tabindex="-1" role="dialog" aria-hidden="true">
+														<div class="modal-dialog modal-dialog-centered" role="document">
+															<div class="modal-content">
+																<div class="modal-body">
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																		<span aria-hidden="true"><i class="icon-close"></i></span>
+																	</button>
+																	<div class="form-box">
+																		<?php the_content();?>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											<?php
+												}
+											?>
     						    <!-- Aquí termina el bucle-->
                                 <?php
                                         endwhile;

@@ -717,6 +717,20 @@
                 <?php
                     $args = array(
                         'posts_per_page' => 3,
+                        // Excluimos los post format (audio y video) del bucle
+                        // Para ello hay que acceder a la taxonomía de WP
+                        // Y crear una consulta con tax_query
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'post_format',  // Especificamos el concepto de búsqueda
+                                'field'    => 'slug',         // El campo del filtro será el slug
+                                'terms'    => array(
+                                    'post-format-video',
+                                    'post-format-audio',
+                                ),
+                                'operator' => 'NOT IN',
+                            ),
+                        ),
                     );
                     $latest_posts = new WP_Query($args);
                         
