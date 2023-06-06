@@ -25,12 +25,12 @@
         </div>
     </nav>
 
-    <!-- Last entries -->
+    <!-- Last reviews -->
     <div class="page-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <h3>Last entries...</h3>
+                    <h3>Last reviews...</h3>
                     
                     <!-- Aquí comienza el bucle-->
                     <?php
