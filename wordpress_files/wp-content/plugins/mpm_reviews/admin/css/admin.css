@@ -1,0 +1,80 @@
+.flex-container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.generic {
+    flex: 1 0 49%;
+}
+
+.generic h4, .itinerary h4 {
+    width: 100%;
+    background-color: rgba(181,181,181,.3);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+    padding: 10px 0;
+}
+
+.itinerary {
+    flex: 1 0 49%;
+    margin-left: 5px;
+}
+
+.custom-field label {
+    display: inline-block;
+    width: 30% !important;
+    margin: 10px 0;
+}
+
+.custom-field input {
+    width: 65%;
+}
+
+.percentages-title {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.photography_level {
+    margin-top: 15px;
+}
+
+#only_adults {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.my_itinerary {
+    margin: 0 auto;
+}
+
+.td a, .add-row, .remove-row {
+    text-decoration: none;
+}
+
+.remove-row, .remove-row:focus {
+    color: #d60b44;
+    box-shadow: none;
+}
+
+.remove-row:hover {
+    color: red;
+}
+
+.add-row, .add-row:focus {
+    color: #32a852;
+    border: 1px solid #32a852;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.add-row:hover {
+    background-color: #32a852;
+    color: white;
+}
