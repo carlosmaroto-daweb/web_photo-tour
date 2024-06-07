@@ -1,0 +1,16 @@
+/*
+Theme Name: PhotoTour Child
+Theme URI: https://photo-tour.carlosmaroto-daweb.com/
+Description: We offer you the best quality Photo Tours and Workshops to the most spectacular destinations on Earth. More than 5 years of experience.
+Author: Carlos Maroto Delgado
+Author URI: https://www.carlosmaroto-daweb.com
+Template: photo-tour
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: photo, tour, travel
+Text Domain: photo-tour-child
+*/
+body {
+    background: red !important;
+}
