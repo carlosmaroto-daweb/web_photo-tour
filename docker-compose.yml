@@ -15,7 +15,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - photo-tour_db_data:/var/lib/mysql
-    mem_limit: 512m
   wordpress_photo-tour:
     container_name: wordpress_photo-tour
     build: 
