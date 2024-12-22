@@ -118,7 +118,6 @@
                             <!-- Aquí comienza el bucle-->
                             <?php
                                 $args = array(
-                                    'post_type'      => array('mpm_reviews'),   // Queremos solo los custom-post-type
                                     'posts_per_page' => 5,                      // Queremos 5 post por página
                                     'category__in'   => $cats,                  // Incluimos los posts que compartan categoria con el post que estamos viendo
                                     'post__not_in'   => array($post_id),        // Excluimos el post que estamos viendo
